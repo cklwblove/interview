@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <title>flex布局（三栏自适应）</title>
+    <link rel="stylesheet" href="https://unpkg.com/normalize.css@8.0.0/normalize.css">
+    <style>
+        html, body {
+            height: 100%;
+        }
+        .flex-container {
+            height: 100%;
+            display: flex;
+        }
+        .flex-container > div {
+            position: relative;
+            float: left;
+            height: 100%;
+        }
+        .flex-middle {
+            width: 100%;
+            background-color: gray;
+            order: 2;
+        }
+        .flex-left {
+            width: 200px;
+            background-color: yellow;
+            flex-shrink: 0;
+            order: 1;
+        }
+        .flex-right {
+            width: 200px;
+            background-color: red;
+            flex-shrink: 0;
+            order: 3;
+        }
+    </style>
+</head>
+<body>
+<div class="flex-container">
+    <!--放在最前面，优先渲染-->
+    <div class="flex-middle">
+        Flex Main
+    </div>
+    <div class="flex-left">
+        Flex Left
+    </div>
+    <div class="flex-right">
+        Flex Right
+    </div>
+</div>
+</body>
+</html>

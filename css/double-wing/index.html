@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <title>双飞翼布局（左右两栏固定，中间自适应）</title>
+    <link rel="stylesheet" href="https://unpkg.com/normalize.css@8.0.0/normalize.css">
+    <style>
+        html, body {
+            height: 100%;
+        }
+        .double-wing-container {
+            height: 100%;
+            overflow: hidden;
+        }
+        .double-wing-container > div {
+            position: relative;
+            float: left;
+            height: 100%;
+        }
+        .double-wing-middle {
+            width: 100%;
+            background-color: gray;
+        }
+        .double-wing-main {
+            background-color: pink;
+            height: 100%;
+            margin: 0 200px;
+            overflow: hidden;
+        }
+        .double-wing-left {
+            width: 200px;
+            background-color: orange;
+            margin-left: -100%;
+        }
+        .double-wing-right {
+            width: 200px;
+            background-color: red;
+            margin-left: -200px;
+        }
+    </style>
+</head>
+<body>
+<div class="double-wing-container">
+    <!--放在最前面，优先渲染-->
+    <div class="double-wing-middle">
+        <div class="double-wing-main">
+            Doubble-wing Main
+        </div>
+    </div>
+    <div class="double-wing-left">
+        Doubble-wing Left
+    </div>
+    <div class="double-wing-right">
+        Doubble-wing Right
+    </div>
+</div>
+<div>现在再试试，是不是比圣杯布局稍微好一点，在窗口宽度过小时不会出现排版混乱？其核心就是把内容部分从 middle 迁移到了 main。</div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <title>table-cell 三栏布局</title>
+    <link rel="stylesheet" href="https://unpkg.com/normalize.css@8.0.0/normalize.css">
+    <style>
+        html, body {
+            height: 100%;
+        }
+        .table-cell-container {
+            height: 100%;
+            overflow: hidden;
+        }
+        .table-cell-container > div {
+            height: 100%;
+            display: table-cell;
+        }
+        .table-cell-middle {
+            width: 100%;
+            margin: 0 200px;
+            background-color: gray;
+        }
+        .table-cell-left {
+            width: 200px;
+            min-width: 200px;
+            background-color: yellow;
+        }
+        .table-cell-right {
+            min-width: 200px;
+            width: 200px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<div class="table-cell-container">
+    <div class="table-cell-left">
+        table-cell Left
+    </div>
+    <div class="table-cell-middle">
+        table-cell Main
+    </div>
+    <div class="table-cell-right">
+        table-cell Right
+    </div>
+</div>
+<div>OK ，现在试一试是不是同样的是一个三栏布局，而且这种布局方案中的三栏高度是统一的，但是其缺陷就是 middle 不能够像其他三栏布局那样放在最前面得到最先渲染</div>
+</body>
+</html>

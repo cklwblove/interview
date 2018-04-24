@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <title>绝对定位布局（三栏自适应）</title>
+    <link rel="stylesheet" href="https://unpkg.com/normalize.css@8.0.0/normalize.css">
+    <style>
+        html, body {
+            height: 100%;
+        }
+        .absolute-container {
+            height: 100%;
+            position: relative;
+        }
+        .absolute-container > div {
+            height: 100%;
+        }
+        .absolute-middle {
+            position: absolute;
+            left: 200px;
+            right: 200px;
+            top: 0;
+            bottom: 0;
+            background-color: gray;
+        }
+        .absolute-left {
+            float: left;
+            width: 200px;
+            background-color: yellow;
+        }
+        .absolute-right {
+            float: right;
+            width: 200px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<div class="absolute-container">
+    <!--放在最前面，优先渲染-->
+    <div class="absolute-middle">
+        Absolute Main
+    </div>
+    <div class="absolute-left">
+        Absolute Left
+    </div>
+    <div class="absolute-right">
+        Absolute Right
+    </div>
+</div>
+<div>注意绝对定位元素的高度需要设置 top: 0 和 bottom: 0 来使其高度撑开。现在试一试是不是同样也实现了三栏布局，不过这种布局方案有一个致命的缺点，就是中间的内容区完全依赖于两栏的高度，如果两栏的高度不够，那么中间内容区的高度也会随着压缩，所以这种方案在很多场景下并不适合。下面我们来聊一个较强一点的非主流三栏布局。</div>
+</body>
+</html>

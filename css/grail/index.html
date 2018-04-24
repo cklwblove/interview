@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <title>圣杯布局（左右两栏固定，中间自适应）</title>
+    <link rel="stylesheet" href="https://unpkg.com/normalize.css@8.0.0/normalize.css">
+    <style>
+        html, body {
+            height: 100%;
+        }
+        .grail-container {
+            padding: 0 200px 0 200px;
+            height: 100%;
+            overflow: hidden;
+        }
+        .grail-container > div {
+            position: relative;
+            float: left;
+            height: 100%;
+        }
+        .grail-middle {
+            width: 100%;
+            background-color: blue;
+        }
+        .grail-left {
+            width: 200px;
+            background-color: green;
+            margin-left: -100%;
+            left: -200px;
+        }
+        .grail-right {
+            width: 200px;
+            background-color: brown;
+            margin-left: -200px;
+            right: -200px;
+        }
+    </style>
+</head>
+<body>
+<div class="grail-container">
+    <!--放在最前面，优先渲染-->
+    <div class="grail-middle">
+        Grail Main
+    </div>
+    <div class="grail-left">
+        Grail Left
+    </div>
+    <div class="grail-right">
+        Grail Right
+    </div>
+</div>
+<div>　圣杯布局就完成了，不信拖拖看，是不是中间就自适应了？不过它有一个弊端，就是当拖到很小的时候，布局会乱，于是我们有了下面的布局：双飞翼布局。</div>
+</body>
+</html>
