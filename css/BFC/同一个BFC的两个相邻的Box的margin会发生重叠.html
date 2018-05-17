@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="https://unpkg.com/normalize.css@8.0.0/normalize.css">
+  <style>
+    .box1,
+    .box2 {
+      width: 100px;
+      height: 100px;
+    }
+
+    .box1 {
+      background: red;
+      margin-bottom: 15px;
+    }
+
+    .box2 {
+      background: green;
+      margin-top: 15px;
+    }
+
+    .box3,
+    .box4 > div {
+      width: 100px;
+      height: 100px;
+    }
+
+    .box3 {
+      background: red;
+      margin-bottom: 15px;
+    }
+
+    .box4 {
+      overflow: hidden;
+    }
+
+    .box4 > div {
+      background: green;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+<div class="box1">box1</div>
+<div class="box2">box2</div>
+<p>Box垂直方向的距离由margin决定。属于同一个BFC的两个相邻Box的margin会发生重叠。两个box会发生margin重叠。解决方案：当两个相邻块级子元素分属于不同的BFC时可以阻止margin重叠。具体方案：给其中的一个div外面包上一个div，然后通过触发外面找个div的BFC，就可以阻断这两个div发生重叠</p>
+<div class="box3">box3</div>
+<div class="box4">
+  <div>box4</div>
+</div>
+</body>
+</html>

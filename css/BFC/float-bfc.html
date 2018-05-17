@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BFC的区域不会与float box重叠</title>
+  <link rel="stylesheet" href="https://unpkg.com/normalize.css@8.0.0/normalize.css">
+  <style>
+    .aside {
+      border: 1px solid #000;
+      width: 100px;
+      height: 100px;
+      float: left;
+      background: red;
+    }
+
+    .text {
+      width: 500px;
+      height: 100px;
+      background: green;
+      overflow: hidden;
+    }
+
+  </style>
+</head>
+<body>
+<div class="aside">aside</div>
+<div class="text">text</div>
+<p>上面aside盒子有一个浮动属性，覆盖了main盒子的内容，main盒子没有清除aside盒子的浮动。只做了一个动作，就是触发自身的BFC，然后就不再被aside盒子覆盖了。所以：BFC的区域不会与float box重叠。</p>
+</body>
+</html>

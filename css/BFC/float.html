@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>每个元素的margin box的左边， 与包含块border box的左边相接触(对于从左往右的格式化，否则相反)。即使存在浮动也是如此。</title>
+  <link rel="stylesheet" href="https://unpkg.com/normalize.css@8.0.0/normalize.css">
+  <style>
+    .parent-box {
+      border: 1px solid #000;
+      overflow: hidden;
+    }
+    .child-box1 {
+      float: left;
+      background: red;
+    }
+    .child-box2 {
+      float: right;
+      background: green;
+    }
+  </style>
+</head>
+<body>
+ <div class="parent-box">
+   <div class="child-box1">左浮动</div>
+   <div class="child-box2">右浮动</div>
+ </div>
+<p>清除内部浮动原理：触发父div的BFC属性，使下面的子div都处在父div的同一个BFC区域之内，此时已成功清除浮动。</p>
+</body>
+</html>
