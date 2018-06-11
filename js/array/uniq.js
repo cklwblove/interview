@@ -81,6 +81,16 @@ function removeRepeatByFilter(array) {
 
 console.log(removeRepeatByFilter(arr1));
 
+
+function removeRepeatByHash(array) {
+  var obj = {};
+  return array.filter(function (item, index) {
+    return obj.hasOwnProperty(typeof item + item) ? false : (obj[typeof item + item] = true);
+  });
+}
+
+console.log('removeRepeatByHash', removeRepeatByHash(arr1));
+
 function removeRepeatByFilterAndSort(array) {
   return array.concat().sort().filter(function(item, index, array){
     return !index || item !== array[index - 1];
