@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>节流 demo</title>
+  <style>
+    #container{
+      width: 100%; height: 200px; line-height: 200px; text-align: center; color: #fff; background-color: #444; font-size: 30px;
+    }
+  </style>
+</head>
+<body>
+<div id="container"></div>
+<script src="index.js"></script>
+<script>
+  var count = 1;
+  var container = document.getElementById('container');
+
+  function getUserAction() {
+    container.innerHTML = count++;
+  };
+
+  container.onmousemove = throttle(getUserAction, 1000);
+</script>
+</body>
+</html>

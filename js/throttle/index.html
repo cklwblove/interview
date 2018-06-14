@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>节流 demo</title>
+  <style>
+    p {
+      height: 500px;
+    }
+  </style>
+</head>
+<body>
+<p>我是占位符</p>
+<p>我是占位符</p>
+<p>我是占位符</p>
+<p>我是占位符</p>
+<p>我是占位符</p>
+<p>我是占位符</p>
+<p>我是占位符</p>
+<p>我是占位符</p>
+<p>我是占位符</p>
+<p>我是占位符</p>
+<p>我是占位符</p>
+<p>我是占位符</p>
+<p>我是占位符</p>
+<p>我是占位符</p>
+<p>我是占位符</p>
+<p>我是占位符</p>
+<script src="index.js"></script>
+<script>
+  function print() {
+    console.log('hello world');
+  }
+
+  window.onscroll = throttle(print, 1000);
+</script>
+</body>
+</html>
