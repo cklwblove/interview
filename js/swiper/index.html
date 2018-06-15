@@ -106,9 +106,12 @@
           },
           on: {
             click: function () {
+              // 这里有坑，需要注意的是：this 指向的是 swpier 实例，而不是当前的 vue， 因此借助 vm，来调用 methods 里的方法
+              // console.log(this); // -> Swiper
+              // 当前活动块的索引，与activeIndex不同的是，在loop模式下不会将 复制的块 的数量计算在内。
               // 当前活动块的索引，与activeIndex不同的是，在loop模式下不会将 复制的块 的数量计算在内。
               const realIndex = this.realIndex;
-              vm.handleClickSlide(realIndex);            s
+              vm.handleClickSlide(realIndex);
             }
           },
           preventLinksPropagation: false   // 阻止点击事件冒泡
@@ -141,8 +144,8 @@
       vm = this;
     },
     methods: {
-      handleClickSlide() {
-        console.log('handleClickSlide', '你好');
+      handleClickSlide(index) {
+        console.log('handleClickSlide current index', index);
       }
     }
   });
