@@ -82,6 +82,7 @@ function removeRepeatByFilter(array) {
 console.log(removeRepeatByFilter(arr1));
 
 
+// 无法对正确区分出两个对象，比如 {value: 1} 和 {value: 2}，因为 typeof item + item 的结果都会是 object[object Object]
 function removeRepeatByHash(array) {
   var obj = {};
   return array.filter(function (item, index) {
@@ -90,6 +91,17 @@ function removeRepeatByHash(array) {
 }
 
 console.log('removeRepeatByHash', removeRepeatByHash(arr1));
+
+// 使用 JSON.stringify 将对象序列化，针对上述问题进行解决
+function removeRepeatByHashStringify(array) {
+  var obj = {};
+  return array.filter(function (item, index) {
+    return obj.hasOwnProperty(typeof item + JSON.stringify(item)) ? false : (obj[typeof item + JSON.stringify(item)] = true)
+  });
+}
+
+console.log(removeRepeatByHashStringify([{value: 1}, {value: 1}, {value: 2}]));
+// [{value: 1}, {value: 2}]
 
 function removeRepeatByFilterAndSort(array) {
   return array.concat().sort().filter(function(item, index, array){
