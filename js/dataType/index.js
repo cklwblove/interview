@@ -75,6 +75,10 @@ function a () {
 }
 a()
 // [object Arguments]
+Object.prototype.toString.call(location)
+// "[object Location]"
+Object.prototype.toString.call(history)
+// "[object History]"
 
 var class2type = {};
 
