@@ -2,7 +2,8 @@
  *
  * @authors liwb (you@example.org)
  * @date    2018/5/16 下午8:10
- * @version $ 复合数组的合并
+ * @description $ 数组的扁平化
+ *  就是将一个嵌套多层的数组 array (嵌套可以是任何层数)转换为只有一层的数组。
  */
 
 var array = [[1, 2], [3, 4], [5, 6], 7]; // => [1,2,3,4,5,6,7]
@@ -18,6 +19,7 @@ function flattenSimple1(array) {
 }
 
 // 或 es6
+// 只能扁平化一层 即 [1,2,3,[5,6]]
 function flattenSimpleByEs6(array) {
   return [].concat(...array);
 }
@@ -48,7 +50,7 @@ function flatten1(array) {
 function flattenByReduce(array) {
   return array.reduce(function (flat, toFlatten) {
     return flat.concat(Array.isArray(toFlatten) ? flattenByReduce(toFlatten) : toFlatten);
-  }, array);
+  }, []);
 }
 
 console.log(flattenByReduce([[1, 2], [3, 4, 5], [6, 7, 8, 9]]));
@@ -80,3 +82,55 @@ flattenAndUnique([[1, 2], [3, 4, 5], [6, 7, 8, 9, [10, [12]]], 11]);
 // => [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 11]
 flattenAndUnique([[1, 2],[3, 4, 5,[1,2,3,4,5]], [6, 7, 8, 9,[10,[12]]],11]);
 // => [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 11]
+
+// 递归
+function flattern(arr) {
+  var result = [];
+  for (var i = 0, len = arr.length; i < len; i++) {
+    if (Array.isArray(arr[i])) {
+      result = result.concat(flattern(arr[i]))
+    } else {
+      result.push(arr[i]);
+    }
+  }
+  return result;
+}
+
+
+/**
+ * 数组扁平化
+ * @param input 要处理的数组
+ * @param shallow 是否只扁平一层
+ * @param strict 是否严格处理元素，下面有解释
+ * @param output 这是为了方便递归而传递的参数
+ * @private
+ */
+function _flattern(input, shallow, strict, output) {
+  // 递归使用的时候会用到output
+  output = output || [];
+  var idx = output.length;
+
+  for (var i = 0, len = input.length; i < len; i++) {
+
+    var value = input[i];
+    // 如果是数组，就进行处理
+    if (Array.isArray(value)) {
+      // 如果是只扁平一层，遍历该数组，依此填入 output
+      if (shallow) {
+        var j = 0, length = value.length;
+        while (j < length) output[idx++] = value[j++];
+      }
+      // 如果是全部扁平就递归，传入已经处理的 output，递归中接着处理 output
+      else {
+        flatten(value, shallow, strict, output);
+        idx = output.length;
+      }
+    }
+    // 不是数组，根据 strict 的值判断是跳过不处理还是放入 output
+    else if (!strict){
+      output[idx++] = value;
+    }
+  }
+
+  return output;
+}

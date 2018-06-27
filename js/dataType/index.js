@@ -97,3 +97,7 @@ function type(obj) {
     class2type[Object.prototype.toString.call(obj)] || "object" :
     typeof obj;
 }
+
+function isFunction(cb) {
+  return type(cb) === 'function';
+}

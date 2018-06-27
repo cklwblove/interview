@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Title</title>
+  <script>
+    window.onload = function () {
+      function onGetLines() {
+        var tmp = document.querySelector('#test').value;
+        var lines = tmp.split(/\r*\n/);
+
+        var linesCount = lines.length - (navigator.userAgent.indexOf('MSIE') !== -1);
+        console.log('当前文本行数', linesCount);
+      }
+
+      document.querySelector('#getLines').addEventListener('click', onGetLines, false)
+    }
+  </script>
+</head>
+<body>
+<textarea name="test" id="test" cols="30" rows="10"></textarea>
+<button id="getLines">获取行数</button>
+</body>
+</html>
