@@ -63,7 +63,7 @@ function removeRepeatBySort(array) {
   var sortArray = array.concat().sort();
   var seen;
   for (var i = 0, len = sortArray.length; i < len; i++) {
-    if (!i || seen !== sortArray[i]) {
+    if(!i || seen !== sortArray[i]) {
       res.push(sortArray[i]);
     }
     seen = sortArray[i];
@@ -100,17 +100,11 @@ function removeRepeatByHashStringify(array) {
   });
 }
 
-console.log(removeRepeatByHashStringify([{
-  value: 1
-}, {
-  value: 1
-}, {
-  value: 2
-}]));
+console.log(removeRepeatByHashStringify([{value: 1}, {value: 1}, {value: 2}]));
 // [{value: 1}, {value: 2}]
 
 function removeRepeatByFilterAndSort(array) {
-  return array.concat().sort().filter(function (item, index, array) {
+  return array.concat().sort().filter(function(item, index, array){
     return !index || item !== array[index - 1];
   })
 }
@@ -134,22 +128,13 @@ function removeRepeatBySetAndMap(array) {
   return arr.filter((a) => !seen.has(a) && seen.set(a, 1));
 }
 
-var arrObject = [{
-    name: 'liwb',
-    from: 'hangzhou'
-  },
+var arrObject = [
   {
-    name: 'liwb',
-    from: 'hangzhou'
+    name: 'liwb', from: 'hangzhou'
   },
-  {
-    name: 'zhangsan',
-    from: 'beijing'
-  },
-  {
-    name: 'wangwu',
-    from: 'shanghai'
-  }
+  {name: 'liwb', from: 'hangzhou'},
+  {name: 'zhangsan', from: 'beijing'},
+  {name: 'wangwu', from: 'shanghai'}
 ];
 
 function removeRepeatArrObj(arrObj) {
@@ -169,38 +154,4 @@ function removeRepeatArrObj(arrObj) {
 
 console.log(removeRepeatArrObj(arrObject));
 
-// https://github.com/seriousManual/dedupe/blob/master/index.js
-function dedupe(client, hasher) {
-  hasher = hasher || JSON.stringify
 
-  const clone = []
-  const lookup = {}
-
-  for (let i = 0; i < client.length; i++) {
-    let elem = client[i]
-    let hashed = hasher(elem)
-
-    if (!lookup[hashed]) {
-      clone.push(elem)
-      lookup[hashed] = true
-    }
-  }
-
-  return clone
-}
-
-var a = [1, 2, 2, 3]
-var b = dedupe(a)
-console.log(b)
-
-var aa = [{
-  a: 2
-}, {
-  a: 1
-}, {
-  a: 1
-}, {
-  a: 1
-}]
-var bb = dedupe(aa)
-console.log(bb)
