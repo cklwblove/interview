@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img id="imgSrc" src="" alt="图片验证码">
+<script src="https://unpkg.com/axios@0.18.0/dist/axios.min.js"></script>
+<script>
+  // https://segmentfault.com/q/1010000012407559-->
+  var data = {
+    "mp": "image_verify_code",
+    "data": {
+      "account_content": "200000056",
+      "date_time": +new Date()
+    }
+  };
+  axios({
+    method: 'post',
+    url: 'http://59.52.224.149:58080/gt/api/annualbill/download',
+    data: JSON.stringify(data),
+    headers: {'Content-Type': 'application/json'},
+    responseType: 'arraybuffer'
+  }).then((response) => {
+    var img = 'data:image/png;base64,' + btoa(
+      new Uint8Array(response.data)
+        .reduce((data, byte) => data + String.fromCharCode(byte), '')
+    );
+    document.querySelector('#imgSrc').setAttribute('src', img)
+  });
+</script>
+</body>
+</html>
