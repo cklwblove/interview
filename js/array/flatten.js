@@ -141,3 +141,20 @@ const flattenDeep = (arr) => Array.isArray(arr)
   : [arr];
 
 flattenDeep([1, [[2], [3, [4]], 5]])
+
+// 深度平铺一个数组。
+// 使用递归。 通过空数组([]) 使用 Array.concat() ，结合 展开运算符( ... ) 来平铺数组。 递归平铺每个数组元素。
+const deepFlatten1 = arr => [].concat(...arr.map(v => (Array.isArray(v) ? deepFlatten(v) : v)));
+
+deepFlatten1([1, [2], [[3], 4], 5]);
+// [1,2,3,4,5]
+
+// 将数组平铺到指定的深度。
+// 使用递归，为每个深度级别 depth 递减 1 。 使用 Array.reduce() 和 Array.concat() 来合并元素或数组。 基本情况下，depth 等于 1 停止递归。 省略第二个参数，depth 只能平铺到 1 (单层平铺) 的深度。
+const flattenByDepth = (arr, depth = 1) =>
+  depth != 1
+    ? arr.reduce((a, v) => a.concat(Array.isArray(v) ? flatten(v, depth - 1) : v), [])
+    : arr.reduce((a, v) => a.concat(v), []);
+
+flattenByDepth([1, [2], 3, 4]); // [1, 2, 3, 4]
+flattenByDepth([1, [2, [3, [4, 5], 6], 7], 8], 2); // [1, 2, 3, [4, 5], 6, 7, 8]
