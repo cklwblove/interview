@@ -1,0 +1,22 @@
+{
+  "name": "mynpm",
+  "version": "1.0.0",
+  "description": "my first command line",
+  "main": "index.js",
+  "bin": {
+    "mynpm": "./index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "liwb",
+  "license": "ISC",
+  "dependencies": {
+    "co": "^4.6.0",
+    "co-prompt": "^1.0.0",
+    "commander": "^2.19.0",
+    "fs-extra": "^7.0.1",
+    "json-format": "^1.0.1",
+    "shelljs": "^0.8.3"
+  }
+}
