@@ -8,14 +8,21 @@
 
 // import '@babel/polyfill';
 
-const array = [1, 2, 3];
-const isES6 = () => console.log(...array);
-isES6();
+// import _ from 'lodash';
+//
+// console.log(_.join(['a', 'b', 'c']));
 
-const arr = [new Promise(() => {
-}), new Promise(() => {
-})];
-
-arr.map(item => {
-  console.log(item);
+// 异步代码
+import(/* webpackChunkName: 'a'*/ './a').then(function (a) {
+  console.log(a);
 });
+
+import(/* webpackChunkName: 'b'*/ './b').then(function (b) {
+  console.log(b);
+});
+
+import(/* webpackChunkName: 'use-lodash'*/ 'lodash').then(function (_) {
+  console.log(_.join(['1', '2']));
+});
+
+

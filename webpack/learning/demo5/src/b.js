@@ -8,5 +8,5 @@
 
 import './common';
 
-console.log('A');
-export default 'A';
+console.log('B');
+export default 'B';

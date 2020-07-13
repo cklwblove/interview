@@ -5,4 +5,8 @@
  * @description
  * @version 1.0.0
  */
- 
+
+import './common';
+
+console.log('A');
+export default 'A';

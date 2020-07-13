@@ -5,4 +5,20 @@
  * @description
  * @version 1.0.0
  */
- 
+
+const path = require('path');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+
+module.exports = {
+  entry: {
+    app: './src/index.js'
+  },
+  output: {
+    publicPath: __dirname + '/dist/', // js 引用的路径或者 CDN 地址
+    path: path.resolve(__dirname, 'dist'), // 打包文件的输出目录
+    filename: 'bundle.js' // 打包后生产的 js 文件
+  },
+  plugins: [
+    new CleanWebpackPlugin()
+  ]
+};

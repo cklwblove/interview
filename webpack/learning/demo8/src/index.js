@@ -17,6 +17,7 @@
 //     console.log(_.join(['3', '4']));
 //   });
 // });
+import './base.css';
 
 document.addEventListener('click', () => {
   import(/* webpackPrefetch: true */ './click.js').then(({default: func}) => {

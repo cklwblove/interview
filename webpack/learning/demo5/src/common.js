@@ -5,4 +5,7 @@
  * @description
  * @version 1.0.0
  */
- 
+
+// common.js
+console.log('公共模块');
+export default 'common';

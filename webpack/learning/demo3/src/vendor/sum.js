@@ -5,4 +5,7 @@
  * @description
  * @version 1.0.0
  */
- 
+
+export default function(a, b) {
+  return a + b
+}

@@ -5,4 +5,8 @@
  * @description
  * @version 1.0.0
  */
- 
+
+module.exports = function (a, b) {
+  return a - b;
+};
+

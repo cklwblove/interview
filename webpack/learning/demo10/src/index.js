@@ -17,6 +17,21 @@
 //     console.log(_.join(['3', '4']));
 //   });
 // });
+import './base.css';
+
+// 判断该浏览器支不支持 serviceWorker
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker
+      .register('/service-worker.js')
+      .then(registration => {
+        console.log('service-worker registed');
+      })
+      .catch(error => {
+        console.log('service-worker registed error');
+      });
+  });
+}
 
 document.addEventListener('click', () => {
   import(/* webpackPrefetch: true */ './click.js').then(({default: func}) => {
