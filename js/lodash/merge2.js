@@ -84,1360 +84,2197 @@ var selectMeta = {
 };
 
 var data = {
-  'list': [
+  "list": [
     {
-      'type': 'grid',
-      'icon': 'icon-grid',
-      'columns': [
-        {
-          'span': 12,
-          'list': [
-            {
-              'type': 'input',
-              'icon': 'icon-input',
-              'options': {
-                'width': '100%',
-                'customClass': 'cloud-form-input',
-                'defaultValue': '',
-                'required': false,
-                'dataType': 'string',
-                'pattern': '',
-                'placeholder': '',
-                'disabled': false,
-                'readonly': false,
-                'isShowLabel': false,
-                'showPassword': false,
-                'labelWidth': 100,
-                'isSupportLabelWidth': false,
-                'remoteFunc': 'func_1582690223570',
-                'hidden': false,
-                'dataBind': true,
-                'remoteOption': 'option_1582690223570'
-              },
-              'name': '类名',
-              'key': '1582690223570',
-              'model': 'className',
-              'rules': [
-                {
-                  'type': 'string',
-                  'message': '类名格式不正确'
-                }
-              ],
-              'id': '32016a01'
-            }
-          ]
-        },
-        {
-          'span': 12,
-          'list': [
-            {
-              'type': 'input',
-              'icon': 'icon-input',
-              'options': {
-                'width': '100%',
-                'customClass': 'cloud-form-input',
-                'defaultValue': '',
-                'required': false,
-                'dataType': 'string',
-                'pattern': '',
-                'placeholder': '',
-                'disabled': false,
-                'readonly': false,
-                'isShowLabel': false,
-                'showPassword': false,
-                'labelWidth': 100,
-                'isSupportLabelWidth': false,
-                'remoteFunc': 'func_1582690348983',
-                'hidden': false,
-                'dataBind': true,
-                'remoteOption': 'option_1582690348983'
-              },
-              'name': '包路径',
-              'key': '1582690348983',
-              'model': 'packageName',
-              'rules': [
-                {
-                  'type': 'string',
-                  'message': '包路径格式不正确'
-                }
-              ],
-              'id': 'db167d49'
-            }
-          ]
-        },
-        {
-          'span': 12,
-          'list': []
-        }
-      ],
-      'options': {
-        'gutter': 0,
-        'justify': 'start',
-        'align': 'top',
-        'hidden': false,
-        'customClass': 'form-grid',
-        'remoteFunc': 'func_1582690213694',
-        'remoteOption': 'option_1582690213694',
-        'isSupportLabelWidth': false,
-        'labelWidth': 100
+      "type": "divider",
+      "icon": "icon-divider",
+      "options": {
+        "customClass": "cloud-divider",
+        "hidden": false,
+        "contentPosition": "left",
+        "direction": "horizontal",
+        "name": "分割线",
+        "remoteFunc": "func_1579260753143",
+        "remoteOption": "option_1579260753143",
+        "isSupportLabelWidth": false,
+        "labelWidth": 100
       },
-      'name': '栅格布局',
-      'key': '1582690213694',
-      'model': 'grid_1582690213694',
-      'rules': [],
-      'id': '4f843dd8',
-      'auth': []
+      "name": "单据概要",
+      "key": "1579260753143",
+      "model": "divider_1579260753143",
+      "rules": [],
+      "id": "823a647a",
+      "auth": []
     },
     {
-      'type': 'input',
-      'icon': 'icon-input',
-      'options': {
-        'width': '100%',
-        'customClass': 'cloud-form-input',
-        'defaultValue': '你好',
-        'required': false,
-        'dataType': 'string',
-        'pattern': '',
-        'placeholder': '',
-        'disabled': false,
-        'readonly': false,
-        'isShowLabel': false,
-        'showPassword': false,
-        'labelWidth': 100,
-        'isSupportLabelWidth': false,
-        'remoteFunc': 'func_1582690498183',
-        'hidden': false,
-        'dataBind': true,
-        'remoteOption': 'option_1582690498183'
-      },
-      'name': '描述',
-      'key': '1582690498183',
-      'model': 'classComment',
-      'rules': [
+      "type": "grid",
+      "icon": "icon-grid",
+      "columns": [
         {
-          'type': 'string',
-          'message': '描述格式不正确'
+          "span": 12,
+          "list": [
+            {
+              "type": "input",
+              "icon": "icon-input",
+              "options": {
+                "width": "88%",
+                "customClass": "cloud-form-input",
+                "defaultValue": "",
+                "required": false,
+                "dataType": "string",
+                "pattern": "",
+                "placeholder": "",
+                "disabled": false,
+                "readonly": false,
+                "isShowLabel": false,
+                "showPassword": false,
+                "labelWidth": 100,
+                "isSupportLabelWidth": false,
+                "remoteFunc": "func_1579260867235",
+                "hidden": false,
+                "dataBind": true,
+                "remoteOption": "option_1579260867235"
+              },
+              "name": "制单人",
+              "key": "1579260867235",
+              "model": "input_1579260867235",
+              "rules": [
+                {
+                  "type": "string",
+                  "message": "制单人格式不正确"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "span": 12,
+          "list": [
+            {
+              "type": "select",
+              "icon": "icon-select",
+              "options": {
+                "defaultValue": [],
+                "multiple": true,
+                "disabled": false,
+                "clearable": false,
+                "placeholder": "",
+                "required": false,
+                "showLabel": false,
+                "width": "88%",
+                "options": [
+                  {
+                    "value": "选项一"
+                  },
+                  {
+                    "value": "选项二"
+                  },
+                  {
+                    "value": "选项三"
+                  }
+                ],
+                "remote": false,
+                "remoteType": "option",
+                "filterable": true,
+                "remoteOption": "option_1579260896750",
+                "remoteOptions": [],
+                "props": {
+                  "value": "value",
+                  "label": "label"
+                },
+                "customClass": "form-select",
+                "isShowLabel": false,
+                "labelWidth": 100,
+                "isSupportLabelWidth": false,
+                "remoteFunc": "func_1579260896750",
+                "hidden": false,
+                "dataBind": true
+              },
+              "name": "制单人部门",
+              "key": "1579260896750",
+              "model": "select_1579260896750",
+              "rules": []
+            }
+          ]
+        },
+        {
+          "span": 12,
+          "list": [
+            {
+              "type": "input",
+              "icon": "icon-input",
+              "options": {
+                "width": "88%",
+                "customClass": "cloud-form-input",
+                "defaultValue": "",
+                "required": false,
+                "dataType": "string",
+                "pattern": "",
+                "placeholder": "",
+                "disabled": false,
+                "readonly": false,
+                "isShowLabel": false,
+                "showPassword": false,
+                "labelWidth": 100,
+                "isSupportLabelWidth": false,
+                "remoteFunc": "func_1579260915805",
+                "hidden": false,
+                "dataBind": true,
+                "remoteOption": "option_1579260915805"
+              },
+              "name": "制单人公司",
+              "key": "1579260915805",
+              "model": "input_1579260915805",
+              "rules": [
+                {
+                  "type": "string",
+                  "message": "制单人公司格式不正确"
+                }
+              ]
+            }
+          ]
         }
       ],
-      'id': '9d470c95'
+      "options": {
+        "gutter": "",
+        "justify": "start",
+        "align": "top",
+        "hidden": false,
+        "customClass": "form-grid",
+        "remoteFunc": "func_1579260855099",
+        "remoteOption": "option_1579260855099",
+        "isSupportLabelWidth": true,
+        "labelWidth": 100
+      },
+      "name": "栅格布局",
+      "key": "1579260855099",
+      "model": "grid_1579260855099",
+      "rules": [],
+      "id": "2a0c3bd3"
     },
     {
-      'type': 'tabs',
-      'icon': 'icon-tabs',
-      'tabs': [
+      "type": "grid",
+      "icon": "icon-grid",
+      "columns": [
         {
-          'label': '模型',
-          'name': 'tab_1',
-          'list': [
+          "span": 12,
+          "list": [
             {
-              'type': 'table',
-              'icon': 'icon-table',
-              'options': {
-                'defaultValue': [],
-                'customClass': 'form-table',
-                'disabled': false,
-                'isShowLabel': false,
-                'labelWidth': 100,
-                'isSupportLabelWidth': false,
-                'remoteFunc': 'func_1582653979060',
-                'hidden': false,
-                'dataBind': true,
-                'remoteOption': 'option_1582653979060'
+              "type": "select",
+              "icon": "icon-select",
+              "options": {
+                "defaultValue": "",
+                "multiple": false,
+                "disabled": false,
+                "clearable": false,
+                "placeholder": "",
+                "required": false,
+                "showLabel": false,
+                "width": "88%",
+                "options": [
+                  {
+                    "value": "选项一"
+                  },
+                  {
+                    "value": "选项二"
+                  },
+                  {
+                    "value": "选项三"
+                  }
+                ],
+                "remote": false,
+                "remoteType": "option",
+                "filterable": false,
+                "remoteOption": "option_1579261652625",
+                "remoteOptions": [],
+                "props": {
+                  "value": "value",
+                  "label": "label"
+                },
+                "customClass": "form-select",
+                "isShowLabel": false,
+                "labelWidth": 100,
+                "isSupportLabelWidth": false,
+                "remoteFunc": "func_1579261652625",
+                "hidden": false,
+                "dataBind": true
               },
-              'tableColumns': [
-                {
-                  'type': 'input',
-                  'icon': 'icon-input',
-                  'options': {
-                    'width': '100px',
-                    'customClass': 'cloud-form-input',
-                    'defaultValue': '',
-                    'required': true,
-                    'dataType': 'string',
-                    'pattern': '',
-                    'placeholder': '',
-                    'disabled': false,
-                    'readonly': false,
-                    'isShowLabel': false,
-                    'showPassword': false,
-                    'labelWidth': 100,
-                    'isSupportLabelWidth': false,
-                    'remoteFunc': 'func_1582653981608',
-                    'hidden': false,
-                    'dataBind': true,
-                    'remoteOption': 'option_1582653981608',
-                    'tableColumn': true
-                  },
-                  'name': '名',
-                  'novalid': {},
-                  'key': '1582653981608',
-                  'model': 'fieldName',
-                  'rules': [
-                    {
-                      'type': 'string',
-                      'message': '名格式不正确'
-                    },
-                    {
-                      'required': true,
-                      'message': '名必须填写'
-                    }
-                  ],
-                  'id': '9298a916'
-                },
-                {
-                  'type': 'select',
-                  'icon': 'icon-select',
-                  'options': {
-                    'defaultValue': '',
-                    'multiple': false,
-                    'disabled': false,
-                    'clearable': false,
-                    'placeholder': '',
-                    'required': false,
-                    'showLabel': false,
-                    'width': '100px',
-                    'options': [
-                      {
-                        'value': 'String'
-                      },
-                      {
-                        'value': 'Integer'
-                      },
-                      {
-                        'value': 'Double'
-                      },
-                      {
-                        'value': 'Date'
-                      },
-                      {
-                        'value': 'BigDecimal'
-                      },
-                      {
-                        'value': 'Text'
-                      },
-                      {
-                        'value': 'Blob'
-                      }
-                    ],
-                    'remote': false,
-                    'remoteType': 'option',
-                    'filterable': false,
-                    'remoteOption': 'option_1582654015085',
-                    'remoteOptions': [],
-                    'props': {
-                      'value': 'value',
-                      'label': 'label'
-                    },
-                    'customClass': 'form-select',
-                    'isShowLabel': false,
-                    'labelWidth': 100,
-                    'isSupportLabelWidth': false,
-                    'remoteFunc': 'func_1582654015085',
-                    'hidden': false,
-                    'dataBind': true,
-                    'tableColumn': true
-                  },
-                  'remoteAPI': {
-                    'url': '',
-                    'requestMethod': 'get'
-                  },
-                  'name': '类型',
-                  'novalid': {},
-                  'key': '1582654015085',
-                  'model': 'fieldClass',
-                  'rules': []
-                },
-                {
-                  'type': 'number',
-                  'icon': 'icon-number',
-                  'options': {
-                    'width': '100px',
-                    'required': false,
-                    'defaultValue': 0,
-                    'min': 0,
-                    'max': 0,
-                    'step': 1,
-                    'disabled': false,
-                    'controlsPosition': '',
-                    'customClass': 'form-input-number',
-                    'isShowLabel': false,
-                    'labelWidth': 100,
-                    'isSupportLabelWidth': false,
-                    'remoteFunc': 'func_1582655260941',
-                    'hidden': false,
-                    'dataBind': true,
-                    'remoteOption': 'option_1582655260941',
-                    'tableColumn': true
-                  },
-                  'name': '长度',
-                  'novalid': {},
-                  'key': '1582655260941',
-                  'model': 'length',
-                  'rules': []
-                },
-                {
-                  'type': 'number',
-                  'icon': 'icon-number',
-                  'options': {
-                    'width': '100px',
-                    'required': false,
-                    'defaultValue': 0,
-                    'min': 0,
-                    'max': 0,
-                    'step': 1,
-                    'disabled': false,
-                    'controlsPosition': '',
-                    'customClass': 'form-input-number',
-                    'isShowLabel': false,
-                    'labelWidth': 100,
-                    'isSupportLabelWidth': false,
-                    'remoteFunc': 'func_1582655312006',
-                    'hidden': false,
-                    'dataBind': true,
-                    'remoteOption': 'option_1582655312006',
-                    'tableColumn': true
-                  },
-                  'name': '小数位',
-                  'novalid': {},
-                  'key': '1582655312006',
-                  'model': 'decimalLength',
-                  'rules': []
-                },
-                {
-                  'type': 'select',
-                  'icon': 'icon-select',
-                  'options': {
-                    'defaultValue': [],
-                    'multiple': true,
-                    'disabled': false,
-                    'clearable': false,
-                    'placeholder': '',
-                    'required': false,
-                    'showLabel': false,
-                    'width': '100px',
-                    'options': [
-                      {
-                        'value': 'NotNull',
-                        'label': 'a'
-                      },
-                      {
-                        'value': 'NotEmpty'
-                      },
-                      {
-                        'value': 'NotBlank'
-                      },
-                      {
-                        'value': 'Email',
-                        'label': 'b'
-                      },
-                      {
-                        'value': 'Phone',
-                        'label': 'c'
-                      }
-                    ],
-                    'remote': false,
-                    'remoteType': 'option',
-                    'filterable': true,
-                    'remoteOption': 'option_1593859363863',
-                    'remoteOptions': [],
-                    'props': {
-                      'value': 'value',
-                      'label': 'label'
-                    },
-                    'customClass': 'form-select',
-                    'isShowLabel': false,
-                    'labelWidth': 100,
-                    'isSupportLabelWidth': false,
-                    'remoteFunc': 'func_1593859363863',
-                    'hidden': false,
-                    'dataBind': true,
-                    'tableColumn': true
-                  },
-                  'remoteAPI': {
-                    'url': '',
-                    'requestMethod': 'get'
-                  },
-                  'name': '检验规则',
-                  'novalid': {},
-                  'key': '1593859363863',
-                  'model': 'validation',
-                  'rules': []
-                },
-                {
-                  'type': 'input',
-                  'icon': 'icon-input',
-                  'options': {
-                    'width': '100px',
-                    'customClass': 'cloud-form-input',
-                    'defaultValue': '',
-                    'required': false,
-                    'dataType': 'string',
-                    'pattern': '',
-                    'placeholder': '',
-                    'disabled': false,
-                    'readonly': false,
-                    'isShowLabel': false,
-                    'showPassword': false,
-                    'labelWidth': 100,
-                    'isSupportLabelWidth': false,
-                    'remoteFunc': 'func_1593860002399',
-                    'hidden': false,
-                    'dataBind': true,
-                    'remoteOption': 'option_1593860002399',
-                    'tableColumn': true
-                  },
-                  'name': '正则规则',
-                  'novalid': {},
-                  'key': '1593860002399',
-                  'model': 'input_1593860002399',
-                  'rules': [
-                    {
-                      'type': 'string',
-                      'message': '正则规则格式不正确'
-                    }
-                  ]
-                },
-                {
-                  'type': 'input',
-                  'icon': 'icon-input',
-                  'options': {
-                    'width': '100px',
-                    'customClass': 'cloud-form-input',
-                    'defaultValue': '',
-                    'required': false,
-                    'dataType': 'string',
-                    'pattern': '',
-                    'placeholder': '',
-                    'disabled': false,
-                    'readonly': false,
-                    'isShowLabel': false,
-                    'showPassword': false,
-                    'labelWidth': 100,
-                    'isSupportLabelWidth': false,
-                    'remoteFunc': 'func_1582655191469',
-                    'hidden': false,
-                    'dataBind': true,
-                    'remoteOption': 'option_1582655191469',
-                    'tableColumn': true
-                  },
-                  'name': '默认值',
-                  'novalid': {},
-                  'key': '1582655191469',
-                  'model': 'default',
-                  'rules': [
-                    {
-                      'type': 'string',
-                      'message': '默认值格式不正确'
-                    }
-                  ]
-                },
-                {
-                  'type': 'input',
-                  'icon': 'icon-input',
-                  'options': {
-                    'width': '250px',
-                    'customClass': 'cloud-form-input',
-                    'defaultValue': '',
-                    'required': false,
-                    'dataType': 'string',
-                    'pattern': '',
-                    'placeholder': '',
-                    'disabled': false,
-                    'readonly': false,
-                    'isShowLabel': false,
-                    'showPassword': false,
-                    'labelWidth': 100,
-                    'isSupportLabelWidth': false,
-                    'remoteFunc': 'func_1582655819942',
-                    'hidden': false,
-                    'dataBind': true,
-                    'remoteOption': 'option_1582655819942',
-                    'tableColumn': true
-                  },
-                  'name': '描述',
-                  'novalid': {},
-                  'key': '1582655819942',
-                  'model': 'fieldComment',
-                  'rules': [
-                    {
-                      'type': 'string',
-                      'message': '描述格式不正确'
-                    }
-                  ]
-                }
-              ],
-              'name': '字段',
-              'key': '1582653979060',
-              'model': 'fieldList',
-              'rules': []
+              "name": "费用类型",
+              "key": "1579261652625",
+              "model": "select_1579261652625",
+              "rules": []
             }
           ]
         },
         {
-          'label': '索引',
-          'name': 'tab_1582655394265',
-          'list': [
+          "span": 12,
+          "list": [
             {
-              'type': 'table',
-              'icon': 'icon-table',
-              'options': {
-                'defaultValue': [],
-                'customClass': 'form-table',
-                'disabled': false,
-                'isShowLabel': false,
-                'labelWidth': 100,
-                'isSupportLabelWidth': false,
-                'remoteFunc': 'func_1582655485586',
-                'hidden': false,
-                'dataBind': true,
-                'remoteOption': 'option_1582655485586'
+              "type": "select",
+              "icon": "icon-select",
+              "options": {
+                "defaultValue": "",
+                "multiple": false,
+                "disabled": false,
+                "clearable": false,
+                "placeholder": "",
+                "required": false,
+                "showLabel": false,
+                "width": "88%",
+                "options": [
+                  {
+                    "value": "选项一"
+                  },
+                  {
+                    "value": "选项二"
+                  },
+                  {
+                    "value": "选项三"
+                  }
+                ],
+                "remote": false,
+                "remoteType": "option",
+                "filterable": false,
+                "remoteOption": "option_1579261655107",
+                "remoteOptions": [],
+                "props": {
+                  "value": "value",
+                  "label": "label"
+                },
+                "customClass": "form-select",
+                "isShowLabel": false,
+                "labelWidth": 100,
+                "isSupportLabelWidth": false,
+                "remoteFunc": "func_1579261655107",
+                "hidden": false,
+                "dataBind": true
               },
-              'tableColumns': [
-                {
-                  'type': 'input',
-                  'icon': 'icon-input',
-                  'options': {
-                    'width': '200px',
-                    'customClass': 'cloud-form-input',
-                    'defaultValue': '',
-                    'required': false,
-                    'dataType': 'string',
-                    'pattern': '',
-                    'placeholder': '',
-                    'disabled': false,
-                    'readonly': false,
-                    'isShowLabel': false,
-                    'showPassword': false,
-                    'labelWidth': 100,
-                    'isSupportLabelWidth': false,
-                    'remoteFunc': 'func_1582656259825',
-                    'hidden': false,
-                    'dataBind': true,
-                    'remoteOption': 'option_1582656259825',
-                    'tableColumn': true
-                  },
-                  'name': '索引名称',
-                  'novalid': {},
-                  'key': '1582656259825',
-                  'model': 'indexName',
-                  'rules': [
-                    {
-                      'type': 'string',
-                      'message': '索引名称格式不正确'
-                    }
-                  ]
-                },
-                {
-                  'type': 'input',
-                  'icon': 'icon-input',
-                  'options': {
-                    'width': '200px',
-                    'customClass': 'cloud-form-input',
-                    'defaultValue': '',
-                    'required': false,
-                    'dataType': 'string',
-                    'pattern': '',
-                    'placeholder': '',
-                    'disabled': false,
-                    'readonly': false,
-                    'isShowLabel': false,
-                    'showPassword': false,
-                    'labelWidth': 100,
-                    'isSupportLabelWidth': false,
-                    'remoteFunc': 'func_1582656262196',
-                    'hidden': false,
-                    'dataBind': true,
-                    'remoteOption': 'option_1582656262196',
-                    'tableColumn': true
-                  },
-                  'name': '字段名称',
-                  'novalid': {},
-                  'key': '1582656262196',
-                  'model': 'fieldName',
-                  'rules': [
-                    {
-                      'type': 'string',
-                      'message': '字段名称格式不正确'
-                    }
-                  ]
-                },
-                {
-                  'type': 'select',
-                  'icon': 'icon-select',
-                  'options': {
-                    'defaultValue': '',
-                    'multiple': false,
-                    'disabled': false,
-                    'clearable': false,
-                    'placeholder': '',
-                    'required': false,
-                    'showLabel': false,
-                    'width': '200px',
-                    'options': [
-                      {
-                        'value': 'normal'
-                      },
-                      {
-                        'value': 'unipue'
-                      }
-                    ],
-                    'remote': false,
-                    'remoteType': 'option',
-                    'filterable': false,
-                    'remoteOption': 'option_1582656430524',
-                    'remoteOptions': [],
-                    'props': {
-                      'value': 'value',
-                      'label': 'label'
-                    },
-                    'customClass': 'form-select',
-                    'isShowLabel': false,
-                    'labelWidth': 100,
-                    'isSupportLabelWidth': false,
-                    'remoteFunc': 'func_1582656430524',
-                    'hidden': false,
-                    'dataBind': true,
-                    'tableColumn': true
-                  },
-                  'remoteAPI': {
-                    'url': '',
-                    'requestMethod': 'get'
-                  },
-                  'name': '索引类型',
-                  'novalid': {},
-                  'key': '1582656430524',
-                  'model': 'indexType',
-                  'rules': []
-                }
-              ],
-              'name': '索引表',
-              'key': '1582655485586',
-              'model': 'indexList',
-              'rules': []
+              "name": "费用归属部门",
+              "key": "1579261655107",
+              "model": "select_1579261655107",
+              "rules": []
             }
           ]
         },
         {
-          'label': '依赖关系',
-          'name': 'tab_1585022111120',
-          'list': [
+          "span": 12,
+          "list": [
             {
-              'type': 'table',
-              'icon': 'icon-table',
-              'options': {
-                'defaultValue': [],
-                'customClass': 'form-table',
-                'disabled': false,
-                'isShowLabel': false,
-                'labelWidth': 100,
-                'isSupportLabelWidth': false,
-                'remoteFunc': 'func_1585022187427',
-                'hidden': false,
-                'dataBind': true,
-                'remoteOption': 'option_1585022187427'
-              },
-              'tableColumns': [
-                {
-                  'type': 'select',
-                  'icon': 'icon-select',
-                  'options': {
-                    'defaultValue': '',
-                    'multiple': false,
-                    'disabled': false,
-                    'clearable': false,
-                    'placeholder': '',
-                    'required': false,
-                    'showLabel': false,
-                    'width': '200px',
-                    'options': [
-                      {
-                        'value': '选项一'
-                      },
-                      {
-                        'value': '选项二'
-                      },
-                      {
-                        'value': '选项三'
-                      }
-                    ],
-                    'remote': 'dict',
-                    'remoteType': 'option',
-                    'filterable': false,
-                    'remoteOption': 'option_1585022239587',
-                    'remoteOptions': [],
-                    'props': {
-                      'value': 'value',
-                      'label': 'label'
-                    },
-                    'customClass': 'form-select',
-                    'isShowLabel': false,
-                    'labelWidth': 100,
-                    'isSupportLabelWidth': false,
-                    'remoteFunc': 'func_1585022239587',
-                    'hidden': false,
-                    'dataBind': true,
-                    'tableColumn': true,
-                    'dictCode': 'domain:list'
+              "type": "select",
+              "icon": "icon-select",
+              "options": {
+                "defaultValue": "",
+                "multiple": false,
+                "disabled": false,
+                "clearable": false,
+                "placeholder": "",
+                "required": false,
+                "showLabel": false,
+                "width": "88%",
+                "options": [
+                  {
+                    "value": "选项一"
                   },
-                  'remoteAPI': {
-                    'url': 'http://geekstorm.picp.vip/builder/api/v1/engine/model/getPageList?modelType=domainmodel&page=1&size=99999',
-                    'requestMethod': 'GET'
+                  {
+                    "value": "选项二"
                   },
-                  'name': '关联模型',
-                  'novalid': {},
-                  'key': '1585022244971',
-                  'model': 'domainModelId',
-                  'rules': [],
-                  'keyValue': {
-                    'keyField': 'name',
-                    'valueField': 'id'
-                  },
-                  'dictOptions': [
-                    {
-                      'id': 1,
-                      'name': '测试',
-                      'category': '5f248150161c426ebcbaf85f7b2a8b88',
-                      'code': '1d9fc31d50b74a089e9577f00ed95189',
-                      'version': null,
-                      'metaInfo': null,
-                      'deploymentId': 103,
-                      'datasourceId': 2,
-                      'isGenerateTable': {
-                        'value': 1,
-                        'display': '是'
-                      },
-                      'bytearray': {
-                        'id': 21,
-                        'name': null,
-                        'bytes': {
-                          'classComment': '类描述信息',
-                          'className': 'testTable',
-                          'indexList': [],
-                          'packageName': 'com.geekstorm.entity',
-                          'fieldList': [
-                            {
-                              'name': 'name',
-                              'type': 'String',
-                              'length': 50,
-                              'decimalLength': 0,
-                              'default': '',
-                              'describe': '姓名',
-                              'fieldComment': '姓名',
-                              'columnName': 'name',
-                              'fieldClass': 'String',
-                              'fieldName': 'name'
-                            },
-                            {
-                              'name': 'age',
-                              'type': 'Integer',
-                              'length': 10,
-                              'decimalLength': 0,
-                              'default': '',
-                              'describe': '年龄',
-                              'fieldComment': '年龄',
-                              'columnName': 'age',
-                              'fieldClass': 'Integer',
-                              'fieldName': 'age'
-                            }
-                          ]
-                        },
-                        'createUserId': '1',
-                        'createTime': '2020-03-03 22:46:58',
-                        'updateUserId': '1',
-                        'updateTime': '2020-03-03 22:46:58',
-                        'ownOrganCode': null,
-                        'ownUserId': null,
-                        'isDelete': 1,
-                        'remark': null
-                      },
-                      'createUserId': '1',
-                      'createTime': '2020-02-26 03:48:07',
-                      'updateUserId': '1',
-                      'updateTime': '2020-03-18 00:56:11',
-                      'ownOrganCode': '1',
-                      'ownUserId': '1',
-                      'isDelete': 1,
-                      'remark': null
-                    },
-                    {
-                      'id': 6,
-                      'name': 'TestTable2',
-                      'category': '5f248150161c426ebcbaf85f7b2a8b88',
-                      'code': '651f8177927a46cd9caeaaf92e24f9e6',
-                      'version': null,
-                      'metaInfo': null,
-                      'deploymentId': 103,
-                      'datasourceId': 2,
-                      'isGenerateTable': {
-                        'value': 1,
-                        'display': '是'
-                      },
-                      'bytearray': {
-                        'id': 20,
-                        'name': null,
-                        'bytes': {
-                          'classComment': '测试表2',
-                          'className': 'TestTable2',
-                          'indexList': [],
-                          'packageName': 'com.geekstorm.entity',
-                          'fieldList': [
-                            {
-                              'fieldName': 'name',
-                              'fieldClass': 'String',
-                              'length': 0,
-                              'decimalLength': 0,
-                              'default': '',
-                              'fieldComment': '姓名'
-                            },
-                            {
-                              'fieldName': 'sex',
-                              'fieldClass': 'Integer',
-                              'length': 0,
-                              'decimalLength': 0,
-                              'default': '',
-                              'fieldComment': '性别'
-                            }
-                          ]
-                        },
-                        'createUserId': '1',
-                        'createTime': '2020-03-03 10:30:42',
-                        'updateUserId': '1',
-                        'updateTime': '2020-03-03 10:30:42',
-                        'ownOrganCode': null,
-                        'ownUserId': null,
-                        'isDelete': 1,
-                        'remark': null
-                      },
-                      'createUserId': '1',
-                      'createTime': '2020-03-03 01:10:38',
-                      'updateUserId': '1',
-                      'updateTime': '2020-03-18 00:56:11',
-                      'ownOrganCode': '1',
-                      'ownUserId': '1',
-                      'isDelete': 1,
-                      'remark': null
-                    },
-                    {
-                      'id': 7,
-                      'name': 'testabcd',
-                      'category': '5f248150161c426ebcbaf85f7b2a8b88',
-                      'code': '678936affa7944fa8b17953fff2e0c83',
-                      'version': null,
-                      'metaInfo': null,
-                      'deploymentId': 103,
-                      'datasourceId': 2,
-                      'isGenerateTable': {
-                        'value': 1,
-                        'display': '是'
-                      },
-                      'bytearray': {
-                        'id': 188,
-                        'name': null,
-                        'bytes': {
-                          'classComment': '测试类',
-                          'className': 'testabcd',
-                          'indexList': [],
-                          'packageName': 'com.geekstorm.entity',
-                          'fieldList': [
-                            {
-                              'fieldName': 'a',
-                              'fieldClass': 'String',
-                              'length': 50,
-                              'decimalLength': 0,
-                              'default': '',
-                              'fieldComment': 'a'
-                            },
-                            {
-                              'fieldName': 'b',
-                              'fieldClass': 'String',
-                              'length': 50,
-                              'decimalLength': 0,
-                              'default': '',
-                              'fieldComment': 'b'
-                            },
-                            {
-                              'fieldName': 'c',
-                              'fieldClass': 'Integer',
-                              'length': 0,
-                              'decimalLength': 0,
-                              'default': '',
-                              'fieldComment': 'c'
-                            }
-                          ]
-                        },
-                        'createUserId': '1',
-                        'createTime': '2020-03-14 15:22:31',
-                        'updateUserId': '1',
-                        'updateTime': '2020-03-14 15:22:31',
-                        'ownOrganCode': null,
-                        'ownUserId': null,
-                        'isDelete': 1,
-                        'remark': null
-                      },
-                      'createUserId': '1',
-                      'createTime': '2020-03-03 01:21:08',
-                      'updateUserId': '1',
-                      'updateTime': '2020-03-18 00:56:11',
-                      'ownOrganCode': '1',
-                      'ownUserId': '1',
-                      'isDelete': 1,
-                      'remark': null
-                    },
-                    {
-                      'id': 11,
-                      'name': '订单模型',
-                      'category': '5f248150161c426ebcbaf85f7b2a8b88',
-                      'code': 'c5ac6c58d3e442b988d2c1e9a404db50',
-                      'version': null,
-                      'metaInfo': null,
-                      'deploymentId': 103,
-                      'datasourceId': 2,
-                      'isGenerateTable': {
-                        'value': 1,
-                        'display': '是'
-                      },
-                      'bytearray': {
-                        'id': 253,
-                        'name': null,
-                        'bytes': {
-                          'classComment': '订单领域模型',
-                          'className': 'test_order',
-                          'indexList': [],
-                          'packageName': 'com.geekstorm.entity',
-                          'fieldList': [
-                            {
-                              'fieldName': 'order_no',
-                              'fieldClass': 'String',
-                              'length': 0,
-                              'decimalLength': 0,
-                              'default': '',
-                              'fieldComment': '订单编号'
-                            },
-                            {
-                              'fieldName': 'amount',
-                              'fieldClass': 'Integer',
-                              'length': 0,
-                              'decimalLength': 0,
-                              'default': '',
-                              'fieldComment': '订单数据'
-                            },
-                            {
-                              'fieldName': 'total_price',
-                              'fieldClass': 'Integer',
-                              'length': 0,
-                              'decimalLength': 0,
-                              'default': '',
-                              'fieldComment': '订单金额'
-                            }
-                          ]
-                        },
-                        'createUserId': '1',
-                        'createTime': '2020-03-16 18:45:06',
-                        'updateUserId': '1',
-                        'updateTime': '2020-03-16 18:45:06',
-                        'ownOrganCode': null,
-                        'ownUserId': null,
-                        'isDelete': 1,
-                        'remark': null
-                      },
-                      'createUserId': '1',
-                      'createTime': '2020-03-16 18:34:45',
-                      'updateUserId': '1',
-                      'updateTime': '2020-03-18 00:56:11',
-                      'ownOrganCode': '1',
-                      'ownUserId': '1',
-                      'isDelete': 1,
-                      'remark': null
-                    },
-                    {
-                      'id': 12,
-                      'name': '积分模型',
-                      'category': '5f248150161c426ebcbaf85f7b2a8b88',
-                      'code': '134b4e4c91174ce98c2d150b1f6cf6a2',
-                      'version': null,
-                      'metaInfo': null,
-                      'deploymentId': 103,
-                      'datasourceId': 2,
-                      'isGenerateTable': {
-                        'value': 1,
-                        'display': '是'
-                      },
-                      'bytearray': {
-                        'id': 268,
-                        'name': null,
-                        'bytes': {
-                          'classComment': '积分模型',
-                          'className': 'test_integral',
-                          'indexList': [],
-                          'packageName': 'com.geekstorm.entity',
-                          'fieldList': [
-                            {
-                              'fieldName': 'points',
-                              'fieldClass': 'Integer',
-                              'length': 0,
-                              'decimalLength': 0,
-                              'default': '',
-                              'fieldComment': '积分'
-                            },
-                            {
-                              'fieldName': 'userid',
-                              'fieldClass': 'Integer',
-                              'length': 0,
-                              'decimalLength': 0,
-                              'default': '',
-                              'fieldComment': '用户ID'
-                            },
-                            {
-                              'fieldName': 'description',
-                              'fieldClass': 'String',
-                              'length': 0,
-                              'decimalLength': 0,
-                              'default': '',
-                              'fieldComment': '描述'
-                            }
-                          ]
-                        },
-                        'createUserId': '1',
-                        'createTime': '2020-03-16 19:26:29',
-                        'updateUserId': '1',
-                        'updateTime': '2020-03-16 19:26:29',
-                        'ownOrganCode': null,
-                        'ownUserId': null,
-                        'isDelete': 1,
-                        'remark': null
-                      },
-                      'createUserId': '1',
-                      'createTime': '2020-03-16 19:23:48',
-                      'updateUserId': '1',
-                      'updateTime': '2020-03-18 00:56:11',
-                      'ownOrganCode': '1',
-                      'ownUserId': '1',
-                      'isDelete': 1,
-                      'remark': null
-                    },
-                    {
-                      'id': 13,
-                      'name': '余额模型',
-                      'category': '5f248150161c426ebcbaf85f7b2a8b88',
-                      'code': 'a131a5b38ae74d7e9c74e8ae3eac80f4',
-                      'version': null,
-                      'metaInfo': null,
-                      'deploymentId': 103,
-                      'datasourceId': 2,
-                      'isGenerateTable': {
-                        'value': 1,
-                        'display': '是'
-                      },
-                      'bytearray': {
-                        'id': 274,
-                        'name': null,
-                        'bytes': {
-                          'classComment': '余额模型',
-                          'className': 'test_yue',
-                          'indexList': [],
-                          'packageName': 'com.geekstorm.entity',
-                          'fieldList': [
-                            {
-                              'fieldName': 'balance',
-                              'fieldClass': 'Integer',
-                              'length': 0,
-                              'decimalLength': 0,
-                              'default': '',
-                              'fieldComment': '钱'
-                            },
-                            {
-                              'fieldName': 'userid',
-                              'fieldClass': 'Integer',
-                              'length': 0,
-                              'decimalLength': 0,
-                              'default': '',
-                              'fieldComment': '用户ID'
-                            }
-                          ]
-                        },
-                        'createUserId': '1',
-                        'createTime': '2020-03-16 19:36:02',
-                        'updateUserId': '1',
-                        'updateTime': '2020-03-16 19:36:02',
-                        'ownOrganCode': null,
-                        'ownUserId': null,
-                        'isDelete': 1,
-                        'remark': null
-                      },
-                      'createUserId': '1',
-                      'createTime': '2020-03-16 19:34:00',
-                      'updateUserId': '1',
-                      'updateTime': '2020-03-18 00:56:11',
-                      'ownOrganCode': '1',
-                      'ownUserId': '1',
-                      'isDelete': 1,
-                      'remark': null
-                    },
-                    {
-                      'id': 14,
-                      'name': '订单模型',
-                      'category': 'cac92ae2636742d98839db5fbeb091ab',
-                      'code': 'f2b39e1bbc654cb88b1b1b2da91acb4a',
-                      'version': null,
-                      'metaInfo': null,
-                      'deploymentId': 107,
-                      'datasourceId': 2,
-                      'isGenerateTable': {
-                        'value': 1,
-                        'display': '是'
-                      },
-                      'bytearray': {
-                        'id': 285,
-                        'name': null,
-                        'bytes': {
-                          'classComment': '电销平台订单领域模型',
-                          'className': 'ecommerce_order',
-                          'indexList': [],
-                          'packageName': 'com.geekstorm.entity',
-                          'fieldList': [
-                            {
-                              'fieldName': 'order_num',
-                              'fieldClass': 'String',
-                              'length': 0,
-                              'decimalLength': 0,
-                              'default': '',
-                              'fieldComment': '订单编号'
-                            },
-                            {
-                              'fieldName': 'total_amount',
-                              'fieldClass': 'Integer',
-                              'length': 0,
-                              'decimalLength': 0,
-                              'default': '',
-                              'fieldComment': '订单总商品数量'
-                            },
-                            {
-                              'fieldName': 'total_price',
-                              'fieldClass': 'Integer',
-                              'length': 0,
-                              'decimalLength': 0,
-                              'default': '',
-                              'fieldComment': '订单总金额'
-                            }
-                          ]
-                        },
-                        'createUserId': '1',
-                        'createTime': '2020-03-18 03:39:37',
-                        'updateUserId': '1',
-                        'updateTime': '2020-03-18 03:39:37',
-                        'ownOrganCode': null,
-                        'ownUserId': null,
-                        'isDelete': 1,
-                        'remark': null
-                      },
-                      'createUserId': '1',
-                      'createTime': '2020-03-18 02:40:02',
-                      'updateUserId': '1',
-                      'updateTime': '2020-03-18 05:26:01',
-                      'ownOrganCode': '1',
-                      'ownUserId': '1',
-                      'isDelete': 1,
-                      'remark': null
-                    }
-                  ]
+                  {
+                    "value": "选项三"
+                  }
+                ],
+                "remote": false,
+                "remoteType": "option",
+                "filterable": false,
+                "remoteOption": "option_1579261657921",
+                "remoteOptions": [],
+                "props": {
+                  "value": "value",
+                  "label": "label"
                 },
-                {
-                  'type': 'select',
-                  'icon': 'icon-select',
-                  'options': {
-                    'defaultValue': '',
-                    'multiple': false,
-                    'disabled': false,
-                    'clearable': false,
-                    'placeholder': '',
-                    'required': false,
-                    'showLabel': false,
-                    'width': '200px',
-                    'options': [
-                      {
-                        'value': 'one'
-                      },
-                      {
-                        'value': 'many'
-                      }
-                    ],
-                    'remote': false,
-                    'remoteType': 'option',
-                    'filterable': false,
-                    'remoteOption': 'option_1585022252699',
-                    'remoteOptions': [],
-                    'props': {
-                      'value': 'value',
-                      'label': 'label'
-                    },
-                    'customClass': 'form-select',
-                    'isShowLabel': false,
-                    'labelWidth': 100,
-                    'isSupportLabelWidth': false,
-                    'remoteFunc': 'func_1585022252699',
-                    'hidden': false,
-                    'dataBind': true,
-                    'tableColumn': true
-                  },
-                  'remoteAPI': {
-                    'url': '',
-                    'requestMethod': 'get'
-                  },
-                  'name': '关联类型',
-                  'novalid': {},
-                  'key': '1585022252699',
-                  'model': 'type',
-                  'rules': []
-                }
-              ],
-              'name': '依赖关系',
-              'key': '1585022187427',
-              'model': 'relationList',
-              'rules': []
-            }
-          ]
-        },
-        {
-          'label': '方法',
-          'name': 'tab_1593859287821',
-          'list': [
-            {
-              'type': 'table',
-              'icon': 'icon-table',
-              'options': {
-                'defaultValue': [],
-                'customClass': 'form-table',
-                'disabled': false,
-                'isShowLabel': false,
-                'labelWidth': 100,
-                'isSupportLabelWidth': false,
-                'remoteFunc': 'func_1593859301071',
-                'hidden': false,
-                'dataBind': true,
-                'remoteOption': 'option_1593859301071'
+                "customClass": "form-select",
+                "isShowLabel": false,
+                "labelWidth": 100,
+                "isSupportLabelWidth": false,
+                "remoteFunc": "func_1579261657921",
+                "hidden": false,
+                "dataBind": true
               },
-              'tableColumns': [
-                {
-                  'type': 'select',
-                  'icon': 'icon-select',
-                  'options': {
-                    'defaultValue': '',
-                    'multiple': false,
-                    'disabled': false,
-                    'clearable': false,
-                    'placeholder': '',
-                    'required': false,
-                    'showLabel': false,
-                    'width': '200px',
-                    'options': [
-                      {
-                        'value': '选项一'
-                      },
-                      {
-                        'value': '选项二'
-                      },
-                      {
-                        'value': '选项三'
-                      }
-                    ],
-                    'remote': false,
-                    'remoteType': 'option',
-                    'filterable': false,
-                    'remoteOption': 'option_1593859305372',
-                    'remoteOptions': [],
-                    'props': {
-                      'value': 'value',
-                      'label': 'label'
-                    },
-                    'customClass': 'form-select',
-                    'isShowLabel': false,
-                    'labelWidth': 100,
-                    'isSupportLabelWidth': false,
-                    'remoteFunc': 'func_1593859305372',
-                    'hidden': false,
-                    'dataBind': true,
-                    'tableColumn': true
-                  },
-                  'remoteAPI': {
-                    'url': '',
-                    'requestMethod': 'get'
-                  },
-                  'name': '默认方法',
-                  'novalid': {},
-                  'key': '1593859305372',
-                  'model': 'select_1593859305372',
-                  'rules': []
-                },
-                {
-                  'type': 'textarea',
-                  'icon': 'icon-textarea',
-                  'options': {
-                    'width': '700px',
-                    'defaultValue': '',
-                    'required': false,
-                    'disabled': false,
-                    'pattern': '',
-                    'placeholder': '该属',
-                    'readonly': false,
-                    'customClass': 'cloud-form-textarea',
-                    'isShowLabel': false,
-                    'labelWidth': 100,
-                    'isSupportLabelWidth': false,
-                    'remoteFunc': 'func_1593860077352',
-                    'hidden': false,
-                    'dataBind': true,
-                    'remoteOption': 'option_1593860077352',
-                    'tableColumn': true
-                  },
-                  'name': '方法规则',
-                  'novalid': {},
-                  'key': '1593860077352',
-                  'model': 'textarea_1593860077352',
-                  'rules': []
-                }
-              ],
-              'name': '子表单',
-              'key': '1593859301071',
-              'model': 'table_1593859301071',
-              'rules': []
+              "name": "费用归属公司",
+              "key": "1579261657921",
+              "model": "select_1579261657921",
+              "rules": []
             }
           ]
         }
       ],
-      'options': {
-        'type': '',
-        'tabPosition': 'top',
-        'customClass': 'form-tabs',
-        'editable': false,
-        'tabLabel': '标签页',
-        'hidden': false,
-        'remoteFunc': 'func_1582653937889',
-        'remoteOption': 'option_1582653937889',
-        'isSupportLabelWidth': false,
-        'labelWidth': 100
+      "options": {
+        "gutter": 0,
+        "justify": "start",
+        "align": "top",
+        "hidden": false,
+        "customClass": "form-grid",
+        "remoteFunc": "func_1579261267678",
+        "remoteOption": "option_1579261267678",
+        "isSupportLabelWidth": false,
+        "labelWidth": 100
       },
-      'name': '标签页',
-      'key': '1582653937889',
-      'model': 'tabs_model',
-      'rules': []
+      "name": "栅格布局",
+      "key": "1579261267678",
+      "model": "grid_1579261267678",
+      "rules": [],
+      "id": "7b5c56c5"
+    },
+    {
+      "type": "grid",
+      "icon": "icon-grid",
+      "columns": [
+        {
+          "span": 12,
+          "list": [
+            {
+              "type": "select",
+              "icon": "icon-select",
+              "options": {
+                "defaultValue": "",
+                "multiple": false,
+                "disabled": false,
+                "clearable": false,
+                "placeholder": "",
+                "required": false,
+                "showLabel": false,
+                "width": "88%",
+                "options": [
+                  {
+                    "value": "选项一"
+                  },
+                  {
+                    "value": "选项二"
+                  },
+                  {
+                    "value": "选项三"
+                  }
+                ],
+                "remote": false,
+                "remoteType": "option",
+                "filterable": false,
+                "remoteOption": "option_1579261397218",
+                "remoteOptions": [],
+                "props": {
+                  "value": "value",
+                  "label": "label"
+                },
+                "customClass": "form-select",
+                "isShowLabel": false,
+                "labelWidth": 100,
+                "isSupportLabelWidth": false,
+                "remoteFunc": "func_1579261397218",
+                "hidden": false,
+                "dataBind": true
+              },
+              "name": "对应成本中心",
+              "key": "1579261397218",
+              "model": "select_1579261397218",
+              "rules": []
+            }
+          ]
+        },
+        {
+          "span": 12,
+          "list": [
+            {
+              "type": "input",
+              "icon": "icon-input",
+              "options": {
+                "width": "88%",
+                "customClass": "cloud-form-input",
+                "defaultValue": "",
+                "required": false,
+                "dataType": "string",
+                "pattern": "",
+                "placeholder": "",
+                "disabled": false,
+                "readonly": false,
+                "isShowLabel": false,
+                "showPassword": false,
+                "labelWidth": 100,
+                "isSupportLabelWidth": false,
+                "remoteFunc": "func_1579261411377",
+                "hidden": false,
+                "dataBind": true,
+                "remoteOption": "option_1579261411377"
+              },
+              "name": "制单日期",
+              "key": "1579261411377",
+              "model": "input_1579261411377",
+              "rules": [
+                {
+                  "type": "string",
+                  "message": "制单日期格式不正确"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "span": 12,
+          "list": [
+            {
+              "type": "select",
+              "icon": "icon-select",
+              "options": {
+                "defaultValue": "",
+                "multiple": false,
+                "disabled": false,
+                "clearable": false,
+                "placeholder": "",
+                "required": false,
+                "showLabel": false,
+                "width": "88%",
+                "options": [
+                  {
+                    "value": "选项一"
+                  },
+                  {
+                    "value": "选项二"
+                  },
+                  {
+                    "value": "选项三"
+                  }
+                ],
+                "remote": false,
+                "remoteType": "option",
+                "filterable": false,
+                "remoteOption": "option_1579261429525",
+                "remoteOptions": [],
+                "props": {
+                  "value": "value",
+                  "label": "label"
+                },
+                "customClass": "form-select",
+                "isShowLabel": false,
+                "labelWidth": 100,
+                "isSupportLabelWidth": false,
+                "remoteFunc": "func_1579261429525",
+                "hidden": false,
+                "dataBind": true
+              },
+              "name": "币种",
+              "key": "1579261429525",
+              "model": "select_1579261429525",
+              "rules": []
+            }
+          ]
+        }
+      ],
+      "options": {
+        "gutter": 0,
+        "justify": "start",
+        "align": "top",
+        "hidden": false,
+        "customClass": "form-grid",
+        "remoteFunc": "func_1579261344175",
+        "remoteOption": "option_1579261344175",
+        "isSupportLabelWidth": false,
+        "labelWidth": 100
+      },
+      "name": "栅格布局",
+      "key": "1579261344175",
+      "model": "grid_1579261344175",
+      "rules": [],
+      "id": "ccbdd8db"
+    },
+    {
+      "type": "grid",
+      "icon": "icon-grid",
+      "columns": [
+        {
+          "span": 12,
+          "list": [
+            {
+              "type": "select",
+              "icon": "icon-select",
+              "options": {
+                "defaultValue": "",
+                "multiple": false,
+                "disabled": false,
+                "clearable": false,
+                "placeholder": "",
+                "required": false,
+                "showLabel": false,
+                "width": "88%",
+                "options": [
+                  {
+                    "value": "选项一"
+                  },
+                  {
+                    "value": "选项二"
+                  },
+                  {
+                    "value": "选项三"
+                  }
+                ],
+                "remote": false,
+                "remoteType": "option",
+                "filterable": false,
+                "remoteOption": "option_1579261462711",
+                "remoteOptions": [],
+                "props": {
+                  "value": "value",
+                  "label": "label"
+                },
+                "customClass": "form-select",
+                "isShowLabel": false,
+                "labelWidth": 100,
+                "isSupportLabelWidth": false,
+                "remoteFunc": "func_1579261462711",
+                "hidden": false,
+                "dataBind": true
+              },
+              "name": "关联申请单",
+              "key": "1579261462711",
+              "model": "select_1579261462711",
+              "rules": []
+            }
+          ]
+        },
+        {
+          "span": 12,
+          "list": [
+            {
+              "type": "select",
+              "icon": "icon-select",
+              "options": {
+                "defaultValue": "",
+                "multiple": false,
+                "disabled": false,
+                "clearable": false,
+                "placeholder": "",
+                "required": false,
+                "showLabel": false,
+                "width": "88%",
+                "options": [
+                  {
+                    "value": "选项一"
+                  },
+                  {
+                    "value": "选项二"
+                  },
+                  {
+                    "value": "选项三"
+                  }
+                ],
+                "remote": false,
+                "remoteType": "option",
+                "filterable": false,
+                "remoteOption": "option_1579261471812",
+                "remoteOptions": [],
+                "props": {
+                  "value": "value",
+                  "label": "label"
+                },
+                "customClass": "form-select",
+                "isShowLabel": false,
+                "labelWidth": 100,
+                "isSupportLabelWidth": false,
+                "remoteFunc": "func_1579261471812",
+                "hidden": false,
+                "dataBind": true
+              },
+              "name": "项目",
+              "key": "1579261471812",
+              "model": "select_1579261471812",
+              "rules": []
+            }
+          ]
+        },
+        {
+          "span": 12,
+          "list": [
+            {
+              "type": "select",
+              "icon": "icon-select",
+              "options": {
+                "defaultValue": "",
+                "multiple": false,
+                "disabled": false,
+                "clearable": false,
+                "placeholder": "",
+                "required": false,
+                "showLabel": false,
+                "width": "88%",
+                "options": [
+                  {
+                    "value": "选项一"
+                  },
+                  {
+                    "value": "选项二"
+                  },
+                  {
+                    "value": "选项三"
+                  }
+                ],
+                "remote": false,
+                "remoteType": "option",
+                "filterable": false,
+                "remoteOption": "option_1579261484657",
+                "remoteOptions": [],
+                "props": {
+                  "value": "value",
+                  "label": "label"
+                },
+                "customClass": "form-select",
+                "isShowLabel": false,
+                "labelWidth": 100,
+                "isSupportLabelWidth": false,
+                "remoteFunc": "func_1579261484657",
+                "hidden": false,
+                "dataBind": true
+              },
+              "name": "替他人报销",
+              "key": "1579261484657",
+              "model": "select_1579261484657",
+              "rules": []
+            }
+          ]
+        }
+      ],
+      "options": {
+        "gutter": 0,
+        "justify": "start",
+        "align": "top",
+        "hidden": false,
+        "customClass": "form-grid",
+        "remoteFunc": "func_1579261456083",
+        "remoteOption": "option_1579261456083",
+        "isSupportLabelWidth": false,
+        "labelWidth": 100
+      },
+      "name": "栅格布局",
+      "key": "1579261456083",
+      "model": "grid_1579261456083",
+      "rules": [],
+      "id": "66690833"
+    },
+    {
+      "type": "grid",
+      "icon": "icon-grid",
+      "columns": [
+        {
+          "span": 12,
+          "list": [
+            {
+              "type": "select",
+              "icon": "icon-select",
+              "options": {
+                "defaultValue": "",
+                "multiple": false,
+                "disabled": false,
+                "clearable": false,
+                "placeholder": "",
+                "required": false,
+                "showLabel": false,
+                "width": "88%",
+                "options": [
+                  {
+                    "value": "选项一"
+                  },
+                  {
+                    "value": "选项二"
+                  },
+                  {
+                    "value": "选项三"
+                  }
+                ],
+                "remote": false,
+                "remoteType": "option",
+                "filterable": false,
+                "remoteOption": "option_1579261569131",
+                "remoteOptions": [],
+                "props": {
+                  "value": "value",
+                  "label": "label"
+                },
+                "customClass": "form-select",
+                "isShowLabel": false,
+                "labelWidth": 100,
+                "isSupportLabelWidth": false,
+                "remoteFunc": "func_1579261569131",
+                "hidden": false,
+                "dataBind": true
+              },
+              "name": "业务性质",
+              "key": "1579261569131",
+              "model": "select_1579261569131",
+              "rules": []
+            }
+          ]
+        },
+        {
+          "span": 12,
+          "list": [
+            {
+              "type": "number",
+              "icon": "icon-number",
+              "options": {
+                "width": "88%",
+                "required": false,
+                "defaultValue": 0,
+                "min": 0,
+                "max": 0,
+                "step": 1,
+                "disabled": false,
+                "controlsPosition": "",
+                "customClass": "form-input-number",
+                "isShowLabel": false,
+                "labelWidth": 100,
+                "isSupportLabelWidth": false,
+                "remoteFunc": "func_1579261582292",
+                "hidden": false,
+                "dataBind": true,
+                "remoteOption": "option_1579261582292"
+              },
+              "name": "粘帖页数",
+              "key": "1579261601000_55831",
+              "model": "number_1579261582292",
+              "rules": []
+            }
+          ]
+        },
+        {
+          "span": 12,
+          "list": [
+            {
+              "type": "number",
+              "icon": "icon-number",
+              "options": {
+                "width": "88%",
+                "required": false,
+                "defaultValue": 0,
+                "min": 0,
+                "max": 0,
+                "step": 1,
+                "disabled": false,
+                "controlsPosition": "",
+                "customClass": "form-input-number",
+                "isShowLabel": false,
+                "labelWidth": 100,
+                "isSupportLabelWidth": false,
+                "remoteFunc": "func_1579261662324",
+                "hidden": false,
+                "dataBind": true,
+                "remoteOption": "option_1579261662324"
+              },
+              "name": "单据张数",
+              "key": "1579261662324",
+              "model": "number_1579261662324",
+              "rules": []
+            }
+          ]
+        }
+      ],
+      "options": {
+        "gutter": 0,
+        "justify": "start",
+        "align": "top",
+        "hidden": false,
+        "customClass": "form-grid",
+        "remoteFunc": "func_1579261516270",
+        "remoteOption": "option_1579261516270",
+        "isSupportLabelWidth": false,
+        "labelWidth": 100
+      },
+      "name": "栅格布局",
+      "key": "1579261516270",
+      "model": "grid_1579261516270",
+      "rules": [],
+      "id": "f370affc"
+    },
+    {
+      "type": "grid",
+      "icon": "icon-grid",
+      "columns": [
+        {
+          "span": 12,
+          "list": [
+            {
+              "type": "input",
+              "icon": "icon-input",
+              "options": {
+                "width": "88%",
+                "customClass": "cloud-form-input",
+                "defaultValue": "",
+                "required": false,
+                "dataType": "string",
+                "pattern": "",
+                "placeholder": "",
+                "disabled": false,
+                "readonly": false,
+                "isShowLabel": false,
+                "showPassword": false,
+                "labelWidth": 100,
+                "isSupportLabelWidth": false,
+                "remoteFunc": "func_1579261679375",
+                "hidden": false,
+                "dataBind": true,
+                "remoteOption": "option_1579261679375"
+              },
+              "name": "员工供应商",
+              "key": "1579261679375",
+              "model": "input_1579261679375",
+              "rules": [
+                {
+                  "type": "string",
+                  "message": "员工供应商格式不正确"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "span": 12,
+          "list": []
+        },
+        {
+          "span": 12,
+          "list": []
+        }
+      ],
+      "options": {
+        "gutter": 0,
+        "justify": "start",
+        "align": "top",
+        "hidden": false,
+        "customClass": "form-grid",
+        "remoteFunc": "func_1579261673978",
+        "remoteOption": "option_1579261673978",
+        "isSupportLabelWidth": false,
+        "labelWidth": 100
+      },
+      "name": "栅格布局",
+      "key": "1579261673978",
+      "model": "grid_1579261673978",
+      "rules": [],
+      "id": "50c4432b"
+    },
+    {
+      "type": "grid",
+      "icon": "icon-grid",
+      "columns": [
+        {
+          "span": 24,
+          "list": [
+            {
+              "type": "input",
+              "icon": "icon-input",
+              "options": {
+                "width": "97%",
+                "customClass": "cloud-form-input",
+                "defaultValue": "",
+                "required": false,
+                "dataType": "string",
+                "pattern": "",
+                "placeholder": "",
+                "disabled": false,
+                "readonly": false,
+                "isShowLabel": false,
+                "showPassword": false,
+                "labelWidth": 100,
+                "isSupportLabelWidth": false,
+                "remoteFunc": "func_1579261708896",
+                "hidden": false,
+                "dataBind": true,
+                "remoteOption": "option_1579261708896"
+              },
+              "name": "报销事项说明",
+              "key": "1579261708896",
+              "model": "input_1579261708896",
+              "rules": [
+                {
+                  "type": "string",
+                  "message": "报销事项说明格式不正确"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "span": 12,
+          "list": []
+        }
+      ],
+      "options": {
+        "gutter": 0,
+        "justify": "start",
+        "align": "top",
+        "hidden": false,
+        "customClass": "form-grid",
+        "remoteFunc": "func_1579261695896",
+        "remoteOption": "option_1579261695896",
+        "isSupportLabelWidth": false,
+        "labelWidth": 100
+      },
+      "name": "栅格布局",
+      "key": "1579261695896",
+      "model": "grid_1579261695896",
+      "rules": [],
+      "id": "31c79552"
+    },
+    {
+      "type": "divider",
+      "icon": "icon-divider",
+      "options": {
+        "customClass": "cloud-divider",
+        "hidden": false,
+        "contentPosition": "left",
+        "direction": "horizontal",
+        "name": "分割线",
+        "remoteFunc": "func_1579262003959",
+        "remoteOption": "option_1579262003959",
+        "isSupportLabelWidth": false,
+        "labelWidth": 100
+      },
+      "name": "预算信息",
+      "key": "1579262003959",
+      "model": "divider_1579262003959",
+      "rules": [],
+      "id": "6166aabc"
+    },
+    {
+      "type": "grid",
+      "icon": "icon-grid",
+      "columns": [
+        {
+          "span": 12,
+          "list": [
+            {
+              "type": "input",
+              "icon": "icon-input",
+              "options": {
+                "width": "88%",
+                "customClass": "cloud-form-input",
+                "defaultValue": "",
+                "required": false,
+                "dataType": "string",
+                "pattern": "",
+                "placeholder": "",
+                "disabled": false,
+                "readonly": false,
+                "isShowLabel": false,
+                "showPassword": false,
+                "labelWidth": 100,
+                "isSupportLabelWidth": false,
+                "remoteFunc": "func_1579262034104",
+                "hidden": false,
+                "dataBind": true,
+                "remoteOption": "option_1579262034104"
+              },
+              "name": "月度预算余额",
+              "key": "1579262034104",
+              "model": "input_1579262034104",
+              "rules": [
+                {
+                  "type": "string",
+                  "message": "月度预算余额格式不正确"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "span": 12,
+          "list": [
+            {
+              "type": "input",
+              "icon": "icon-input",
+              "options": {
+                "width": "88%",
+                "customClass": "cloud-form-input",
+                "defaultValue": "",
+                "required": false,
+                "dataType": "string",
+                "pattern": "",
+                "placeholder": "",
+                "disabled": false,
+                "readonly": false,
+                "isShowLabel": false,
+                "showPassword": false,
+                "labelWidth": 100,
+                "isSupportLabelWidth": false,
+                "remoteFunc": "func_1579262037164",
+                "hidden": false,
+                "dataBind": true,
+                "remoteOption": "option_1579262037164"
+              },
+              "name": "年度预算余额",
+              "key": "1579262037164",
+              "model": "input_1579262037164",
+              "rules": [
+                {
+                  "type": "string",
+                  "message": "年度预算余额格式不正确"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "span": 12,
+          "list": []
+        }
+      ],
+      "options": {
+        "gutter": 0,
+        "justify": "start",
+        "align": "top",
+        "hidden": false,
+        "customClass": "form-grid",
+        "remoteFunc": "func_1579262016209",
+        "remoteOption": "option_1579262016209"
+      },
+      "name": "栅格布局",
+      "key": "1579262016209",
+      "model": "grid_1579262016209",
+      "rules": [],
+      "id": "b4ed88b0"
+    },
+    {
+      "type": "divider",
+      "icon": "icon-divider",
+      "options": {
+        "customClass": "cloud-divider",
+        "hidden": false,
+        "contentPosition": "left",
+        "direction": "horizontal",
+        "name": "分割线",
+        "remoteFunc": "func_1579262090186",
+        "remoteOption": "option_1579262090186",
+        "isSupportLabelWidth": false,
+        "labelWidth": 100
+      },
+      "name": "费用详情",
+      "key": "1579262090186",
+      "model": "divider_1579262090186",
+      "rules": [],
+      "id": "14912b10"
+    },
+    {
+      "type": "tabs",
+      "icon": "icon-tabs",
+      "tabs": [
+        {
+          "label": "张三",
+          "name": "tab_1",
+          "list": [
+            {
+              "type": "table",
+              "icon": "icon-table",
+              "options": {
+                "defaultValue": [],
+                "customClass": "form-table",
+                "disabled": false,
+                "isShowLabel": false,
+                "labelWidth": 100,
+                "isSupportLabelWidth": false,
+                "remoteFunc": "func_1579262131742",
+                "hidden": false,
+                "dataBind": true,
+                "remoteOption": "option_1579262131742"
+              },
+              "tableColumns": [
+                {
+                  "type": "input",
+                  "icon": "icon-input",
+                  "options": {
+                    "width": "300px",
+                    "customClass": "cloud-form-input",
+                    "defaultValue": "",
+                    "required": false,
+                    "dataType": "string",
+                    "pattern": "",
+                    "placeholder": "",
+                    "disabled": false,
+                    "readonly": false,
+                    "isShowLabel": false,
+                    "showPassword": false,
+                    "labelWidth": 100,
+                    "isSupportLabelWidth": false,
+                    "remoteFunc": "func_1579262136893",
+                    "hidden": false,
+                    "dataBind": true,
+                    "remoteOption": "option_1579262136893",
+                    "tableColumn": true
+                  },
+                  "name": "备用2",
+                  "novalid": {},
+                  "key": "1579262136893",
+                  "model": "input_1579262136893",
+                  "rules": [
+                    {
+                      "type": "string",
+                      "message": "备用2格式不正确"
+                    }
+                  ]
+                },
+                {
+                  "type": "input",
+                  "icon": "icon-input",
+                  "options": {
+                    "width": "300px",
+                    "customClass": "cloud-form-input",
+                    "defaultValue": "",
+                    "required": false,
+                    "dataType": "string",
+                    "pattern": "",
+                    "placeholder": "",
+                    "disabled": false,
+                    "readonly": false,
+                    "isShowLabel": false,
+                    "showPassword": false,
+                    "labelWidth": 100,
+                    "isSupportLabelWidth": false,
+                    "remoteFunc": "func_1579262143408",
+                    "hidden": false,
+                    "dataBind": true,
+                    "remoteOption": "option_1579262143408",
+                    "tableColumn": true
+                  },
+                  "name": "金额",
+                  "novalid": {},
+                  "key": "1579262143408",
+                  "model": "input_1579262143408",
+                  "rules": [
+                    {
+                      "type": "string",
+                      "message": "金额格式不正确"
+                    }
+                  ]
+                }
+              ],
+              "name": "子表单",
+              "key": "1579262131742",
+              "model": "testTable1",
+              "rules": []
+            }
+          ]
+        }
+      ],
+      "options": {
+        "type": "",
+        "tabPosition": "top",
+        "customClass": "form-tabs",
+        "tabEditable": true,
+        "tabLabel": "张三",
+        "hidden": false,
+        "remoteFunc": "func_1579262111074",
+        "remoteOption": "option_1579262111074",
+        "isSupportLabelWidth": false,
+        "labelWidth": 100
+      },
+      "name": "标签页",
+      "key": "1579262111074",
+      "model": "tabs_1579262111074",
+      "rules": [],
+      "id": "d0230b4c"
+    },
+    {
+      "type": "divider",
+      "icon": "icon-divider",
+      "options": {
+        "customClass": "cloud-divider",
+        "hidden": false,
+        "contentPosition": "left",
+        "direction": "horizontal",
+        "name": "分割线",
+        "remoteFunc": "func_1579262276761",
+        "remoteOption": "option_1579262276761",
+        "isSupportLabelWidth": false,
+        "labelWidth": 100
+      },
+      "name": "支付信息",
+      "key": "1579262276761",
+      "model": "divider_1579262276761",
+      "rules": [],
+      "id": "5d5a4076"
+    },
+    {
+      "type": "grid",
+      "icon": "icon-grid",
+      "columns": [
+        {
+          "span": 12,
+          "list": [
+            {
+              "type": "input",
+              "icon": "icon-input",
+              "options": {
+                "width": "88%",
+                "customClass": "cloud-form-input",
+                "defaultValue": "",
+                "required": false,
+                "dataType": "number",
+                "pattern": "",
+                "placeholder": "",
+                "disabled": false,
+                "readonly": true,
+                "isShowLabel": false,
+                "showPassword": false,
+                "labelWidth": 100,
+                "isSupportLabelWidth": false,
+                "remoteFunc": "func_1579262306572",
+                "hidden": false,
+                "dataBind": true,
+                "remoteOption": "option_1579262306572"
+              },
+              "name": "收款金额",
+              "key": "1579262306572",
+              "model": "input_1579262306572",
+              "rules": [
+                {
+                  "type": "string",
+                  "message": "收款金额格式不正确"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "span": 12,
+          "list": [
+            {
+              "type": "select",
+              "icon": "icon-select",
+              "options": {
+                "defaultValue": "",
+                "multiple": false,
+                "disabled": false,
+                "clearable": false,
+                "placeholder": "",
+                "required": false,
+                "showLabel": false,
+                "width": "88%",
+                "options": [
+                  {
+                    "value": "选项一"
+                  },
+                  {
+                    "value": "选项二"
+                  },
+                  {
+                    "value": "选项三"
+                  }
+                ],
+                "remote": false,
+                "remoteType": "option",
+                "filterable": false,
+                "remoteOption": "option_1579262357362",
+                "remoteOptions": [],
+                "props": {
+                  "value": "value",
+                  "label": "label"
+                },
+                "customClass": "form-select",
+                "isShowLabel": false,
+                "labelWidth": 100,
+                "isSupportLabelWidth": false,
+                "remoteFunc": "func_1579262357362",
+                "hidden": false,
+                "dataBind": true
+              },
+              "name": "收款方式",
+              "key": "1579262357362",
+              "model": "select_1579262357362",
+              "rules": []
+            }
+          ]
+        },
+        {
+          "span": 12,
+          "list": [
+            {
+              "type": "select",
+              "icon": "icon-select",
+              "options": {
+                "defaultValue": "",
+                "multiple": false,
+                "disabled": false,
+                "clearable": false,
+                "placeholder": "",
+                "required": false,
+                "showLabel": false,
+                "width": "88%",
+                "options": [
+                  {
+                    "value": "选项一"
+                  },
+                  {
+                    "value": "选项二"
+                  },
+                  {
+                    "value": "选项三"
+                  }
+                ],
+                "remote": false,
+                "remoteType": "option",
+                "filterable": false,
+                "remoteOption": "option_1579262370420",
+                "remoteOptions": [],
+                "props": {
+                  "value": "value",
+                  "label": "label"
+                },
+                "customClass": "form-select",
+                "isShowLabel": false,
+                "labelWidth": 100,
+                "isSupportLabelWidth": false,
+                "remoteFunc": "func_1579262370420",
+                "hidden": false,
+                "dataBind": true
+              },
+              "name": "账户类型",
+              "key": "1579262370420",
+              "model": "select_1579262370420",
+              "rules": []
+            }
+          ]
+        }
+      ],
+      "options": {
+        "gutter": 0,
+        "justify": "start",
+        "align": "top",
+        "hidden": false,
+        "customClass": "form-grid",
+        "remoteFunc": "func_1579262289447",
+        "remoteOption": "option_1579262289447"
+      },
+      "name": "栅格布局",
+      "key": "1579262289447",
+      "model": "grid_1579262289447",
+      "rules": [],
+      "id": "a2cad46a"
+    },
+    {
+      "type": "grid",
+      "icon": "icon-grid",
+      "columns": [
+        {
+          "span": 12,
+          "list": [
+            {
+              "type": "input",
+              "icon": "icon-input",
+              "options": {
+                "width": "88%",
+                "customClass": "cloud-form-input",
+                "defaultValue": "",
+                "required": false,
+                "dataType": "string",
+                "pattern": "",
+                "placeholder": "",
+                "disabled": false,
+                "readonly": false,
+                "isShowLabel": false,
+                "showPassword": false,
+                "labelWidth": 100,
+                "isSupportLabelWidth": false,
+                "remoteFunc": "func_1579262388440",
+                "hidden": false,
+                "dataBind": true,
+                "remoteOption": "option_1579262388440"
+              },
+              "name": "账户名称",
+              "key": "1579262388440",
+              "model": "input_1579262388440",
+              "rules": [
+                {
+                  "type": "string",
+                  "message": "账户名称格式不正确"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "span": 12,
+          "list": [
+            {
+              "type": "input",
+              "icon": "icon-input",
+              "options": {
+                "width": "88%",
+                "customClass": "cloud-form-input",
+                "defaultValue": "",
+                "required": false,
+                "dataType": "string",
+                "pattern": "",
+                "placeholder": "",
+                "disabled": false,
+                "readonly": false,
+                "isShowLabel": false,
+                "showPassword": false,
+                "labelWidth": 100,
+                "isSupportLabelWidth": false,
+                "remoteFunc": "func_1579262400045",
+                "hidden": false,
+                "dataBind": true,
+                "remoteOption": "option_1579262400045"
+              },
+              "name": "账号",
+              "key": "1579262400045",
+              "model": "input_1579262400045",
+              "rules": [
+                {
+                  "type": "string",
+                  "message": "账号格式不正确"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "span": 12,
+          "list": [
+            {
+              "type": "input",
+              "icon": "icon-input",
+              "options": {
+                "width": "88%",
+                "customClass": "cloud-form-input",
+                "defaultValue": "",
+                "required": false,
+                "dataType": "string",
+                "pattern": "",
+                "placeholder": "",
+                "disabled": false,
+                "readonly": false,
+                "isShowLabel": false,
+                "showPassword": false,
+                "labelWidth": 100,
+                "isSupportLabelWidth": false,
+                "remoteFunc": "func_1579262411762",
+                "hidden": false,
+                "dataBind": true,
+                "remoteOption": "option_1579262411762"
+              },
+              "name": "开户行",
+              "key": "1579262411762",
+              "model": "input_1579262411762",
+              "rules": [
+                {
+                  "type": "string",
+                  "message": "开户行格式不正确"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "options": {
+        "gutter": 0,
+        "justify": "start",
+        "align": "top",
+        "hidden": false,
+        "customClass": "form-grid",
+        "remoteFunc": "func_1579262297096",
+        "remoteOption": "option_1579262297096"
+      },
+      "name": "栅格布局",
+      "key": "1579262297096",
+      "model": "grid_1579262297096",
+      "rules": [],
+      "id": "5697500d"
+    },
+    {
+      "type": "divider",
+      "icon": "icon-divider",
+      "options": {
+        "customClass": "cloud-divider",
+        "hidden": false,
+        "contentPosition": "left",
+        "direction": "horizontal",
+        "name": "分割线",
+        "remoteFunc": "func_1579262475785",
+        "remoteOption": "option_1579262475785",
+        "isSupportLabelWidth": false,
+        "labelWidth": 100
+      },
+      "name": "分摊详情",
+      "key": "1579262475785",
+      "model": "divider_1579262475785",
+      "rules": [],
+      "id": "17a553f6"
+    },
+    {
+      "type": "table",
+      "icon": "icon-table",
+      "options": {
+        "defaultValue": [],
+        "customClass": "form-table",
+        "disabled": false,
+        "isShowLabel": false,
+        "labelWidth": 100,
+        "isSupportLabelWidth": false,
+        "remoteFunc": "func_1579262501078",
+        "hidden": false,
+        "dataBind": true,
+        "remoteOption": "option_1579262501078"
+      },
+      "tableColumns": [
+        {
+          "type": "select",
+          "icon": "icon-select",
+          "options": {
+            "defaultValue": "",
+            "multiple": false,
+            "disabled": false,
+            "clearable": false,
+            "placeholder": "",
+            "required": false,
+            "showLabel": false,
+            "width": "150px",
+            "options": [
+              {
+                "value": "选项一"
+              },
+              {
+                "value": "选项二"
+              },
+              {
+                "value": "选项三"
+              }
+            ],
+            "remote": false,
+            "remoteType": "option",
+            "filterable": false,
+            "remoteOption": "option_1579262529927",
+            "remoteOptions": [],
+            "props": {
+              "value": "value",
+              "label": "label"
+            },
+            "customClass": "form-select",
+            "isShowLabel": false,
+            "labelWidth": 100,
+            "isSupportLabelWidth": false,
+            "remoteFunc": "func_1579262529927",
+            "hidden": false,
+            "dataBind": true,
+            "tableColumn": true
+          },
+          "name": "费用类型",
+          "novalid": {},
+          "key": "1579262529927",
+          "model": "select_1579262529927",
+          "rules": []
+        },
+        {
+          "type": "select",
+          "icon": "icon-select",
+          "options": {
+            "defaultValue": "",
+            "multiple": false,
+            "disabled": false,
+            "clearable": false,
+            "placeholder": "",
+            "required": false,
+            "showLabel": false,
+            "width": "150px",
+            "options": [
+              {
+                "value": "选项一"
+              },
+              {
+                "value": "选项二"
+              },
+              {
+                "value": "选项三"
+              }
+            ],
+            "remote": false,
+            "remoteType": "option",
+            "filterable": false,
+            "remoteOption": "option_1579262538217",
+            "remoteOptions": [],
+            "props": {
+              "value": "value",
+              "label": "label"
+            },
+            "customClass": "form-select",
+            "isShowLabel": false,
+            "labelWidth": 100,
+            "isSupportLabelWidth": false,
+            "remoteFunc": "func_1579262538217",
+            "hidden": false,
+            "dataBind": true,
+            "tableColumn": true
+          },
+          "name": "费用承担部门",
+          "novalid": {},
+          "key": "1579262538217",
+          "model": "select_1579262538217",
+          "rules": []
+        },
+        {
+          "type": "input",
+          "icon": "icon-input",
+          "options": {
+            "width": "150px",
+            "customClass": "cloud-form-input",
+            "defaultValue": "",
+            "required": false,
+            "dataType": "string",
+            "pattern": "",
+            "placeholder": "",
+            "disabled": false,
+            "readonly": false,
+            "isShowLabel": false,
+            "showPassword": false,
+            "labelWidth": 100,
+            "isSupportLabelWidth": false,
+            "remoteFunc": "func_1579262563165",
+            "hidden": false,
+            "dataBind": true,
+            "remoteOption": "option_1579262563165",
+            "tableColumn": true
+          },
+          "name": "分摊金额",
+          "novalid": {},
+          "key": "1579262563165",
+          "model": "input_1579262563165",
+          "rules": [
+            {
+              "type": "string",
+              "message": "分摊金额格式不正确"
+            }
+          ]
+        },
+        {
+          "type": "input",
+          "icon": "icon-input",
+          "options": {
+            "width": "150px",
+            "customClass": "cloud-form-input",
+            "defaultValue": "",
+            "required": false,
+            "dataType": "string",
+            "pattern": "",
+            "placeholder": "",
+            "disabled": false,
+            "readonly": false,
+            "isShowLabel": false,
+            "showPassword": false,
+            "labelWidth": 100,
+            "isSupportLabelWidth": false,
+            "remoteFunc": "func_1579262578104",
+            "hidden": false,
+            "dataBind": true,
+            "remoteOption": "option_1579262578104",
+            "tableColumn": true
+          },
+          "name": "成本中心",
+          "novalid": {},
+          "key": "1579262578104",
+          "model": "input_1579262578104",
+          "rules": [
+            {
+              "type": "string",
+              "message": "成本中心格式不正确"
+            }
+          ]
+        },
+        {
+          "type": "input",
+          "icon": "icon-input",
+          "options": {
+            "width": "150px",
+            "customClass": "cloud-form-input",
+            "defaultValue": "",
+            "required": false,
+            "dataType": "string",
+            "pattern": "",
+            "placeholder": "",
+            "disabled": false,
+            "readonly": false,
+            "isShowLabel": false,
+            "showPassword": false,
+            "labelWidth": 100,
+            "isSupportLabelWidth": false,
+            "remoteFunc": "func_1579262600054",
+            "hidden": false,
+            "dataBind": true,
+            "remoteOption": "option_1579262600054",
+            "tableColumn": true
+          },
+          "name": "月度预算信息",
+          "novalid": {},
+          "key": "1579262600054",
+          "model": "input_1579262600054",
+          "rules": [
+            {
+              "type": "string",
+              "message": "月度预算信息格式不正确"
+            }
+          ]
+        },
+        {
+          "type": "input",
+          "icon": "icon-input",
+          "options": {
+            "width": "150px",
+            "customClass": "cloud-form-input",
+            "defaultValue": "",
+            "required": false,
+            "dataType": "string",
+            "pattern": "",
+            "placeholder": "",
+            "disabled": false,
+            "readonly": false,
+            "isShowLabel": false,
+            "showPassword": false,
+            "labelWidth": 100,
+            "isSupportLabelWidth": false,
+            "remoteFunc": "func_1579262615134",
+            "hidden": false,
+            "dataBind": true,
+            "remoteOption": "option_1579262615134",
+            "tableColumn": true
+          },
+          "name": "年度预算信息",
+          "novalid": {},
+          "key": "1579262615134",
+          "model": "input_1579262615134",
+          "rules": [
+            {
+              "type": "string",
+              "message": "年度预算信息格式不正确"
+            }
+          ]
+        }
+      ],
+      "name": "子表单",
+      "key": "1579262501078",
+      "model": "table_1579262501078",
+      "rules": [],
+      "id": "61544301"
+    },
+    {
+      "type": "divider",
+      "icon": "icon-divider",
+      "options": {
+        "customClass": "cloud-divider",
+        "hidden": false,
+        "contentPosition": "left",
+        "direction": "horizontal",
+        "name": "分割线",
+        "remoteFunc": "func_1579262728427",
+        "remoteOption": "option_1579262728427",
+        "isSupportLabelWidth": false,
+        "labelWidth": 100
+      },
+      "name": "附加信息",
+      "key": "1579262728427",
+      "model": "divider_1579262728427",
+      "rules": [],
+      "id": "f6700a42"
+    },
+    {
+      "type": "tabs",
+      "icon": "icon-tabs",
+      "tabs": [
+        {
+          "label": "附件",
+          "name": "tab_1",
+          "list": [
+            {
+              "type": "fileUpload",
+              "icon": "icon-file-upload",
+              "options": {
+                "defaultValue": [],
+                "tip": "",
+                "buttonText": "点击上传文件",
+                "customClass": "form-file",
+                "disabled": false,
+                "multiple": false,
+                "limit": 9,
+                "fileList": [],
+                "drag": false,
+                "action": "https://jsonplaceholder.typicode.com/photos/",
+                "isShowLabel": false,
+                "labelWidth": 100,
+                "isSupportLabelWidth": false,
+                "remoteFunc": "func_1579262820549",
+                "hidden": false,
+                "dataBind": true,
+                "remoteOption": "option_1579262820549"
+              },
+              "name": "文件上传",
+              "key": "1579262820549",
+              "model": "fileUpload_1579262820549",
+              "rules": []
+            }
+          ]
+        },
+        {
+          "label": "税金及发票",
+          "name": "tab_1579262762823",
+          "list": [
+            {
+              "type": "table",
+              "icon": "icon-table",
+              "options": {
+                "defaultValue": [],
+                "customClass": "form-table",
+                "disabled": false,
+                "isShowLabel": false,
+                "labelWidth": 100,
+                "isSupportLabelWidth": false,
+                "remoteFunc": "func_1579262861803",
+                "hidden": false,
+                "dataBind": true,
+                "remoteOption": "option_1579262861803"
+              },
+              "tableColumns": [
+                {
+                  "type": "select",
+                  "icon": "icon-select",
+                  "options": {
+                    "defaultValue": "",
+                    "multiple": false,
+                    "disabled": false,
+                    "clearable": false,
+                    "placeholder": "",
+                    "required": false,
+                    "showLabel": false,
+                    "width": "150px",
+                    "options": [
+                      {
+                        "value": "选项一"
+                      },
+                      {
+                        "value": "选项二"
+                      },
+                      {
+                        "value": "选项三"
+                      }
+                    ],
+                    "remote": false,
+                    "remoteType": "option",
+                    "filterable": false,
+                    "remoteOption": "option_1579262871753",
+                    "remoteOptions": [],
+                    "props": {
+                      "value": "value",
+                      "label": "label"
+                    },
+                    "customClass": "form-select",
+                    "isShowLabel": false,
+                    "labelWidth": 100,
+                    "isSupportLabelWidth": false,
+                    "remoteFunc": "func_1579262871753",
+                    "hidden": false,
+                    "dataBind": true,
+                    "tableColumn": true
+                  },
+                  "name": "发票类型",
+                  "novalid": {},
+                  "key": "1579262871753",
+                  "model": "select_1579262871753",
+                  "rules": []
+                },
+                {
+                  "type": "input",
+                  "icon": "icon-input",
+                  "options": {
+                    "width": "150px",
+                    "customClass": "cloud-form-input",
+                    "defaultValue": "",
+                    "required": false,
+                    "dataType": "string",
+                    "pattern": "",
+                    "placeholder": "",
+                    "disabled": false,
+                    "readonly": false,
+                    "isShowLabel": false,
+                    "showPassword": false,
+                    "labelWidth": 100,
+                    "isSupportLabelWidth": false,
+                    "remoteFunc": "func_1579262895125",
+                    "hidden": false,
+                    "dataBind": true,
+                    "remoteOption": "option_1579262895125",
+                    "tableColumn": true
+                  },
+                  "name": "发票号码",
+                  "novalid": {},
+                  "key": "1579262895125",
+                  "model": "input_1579262895125",
+                  "rules": [
+                    {
+                      "type": "string",
+                      "message": "发票号码格式不正确"
+                    }
+                  ]
+                },
+                {
+                  "type": "input",
+                  "icon": "icon-input",
+                  "options": {
+                    "width": "100px",
+                    "customClass": "cloud-form-input",
+                    "defaultValue": "",
+                    "required": false,
+                    "dataType": "string",
+                    "pattern": "",
+                    "placeholder": "",
+                    "disabled": false,
+                    "readonly": false,
+                    "isShowLabel": false,
+                    "showPassword": false,
+                    "labelWidth": 100,
+                    "isSupportLabelWidth": false,
+                    "remoteFunc": "func_1579262904968",
+                    "hidden": false,
+                    "dataBind": true,
+                    "remoteOption": "option_1579262904968",
+                    "tableColumn": true
+                  },
+                  "name": "发票代码",
+                  "novalid": {},
+                  "key": "1579262904968",
+                  "model": "input_1579262904968",
+                  "rules": [
+                    {
+                      "type": "string",
+                      "message": "发票代码格式不正确"
+                    }
+                  ]
+                },
+                {
+                  "type": "input",
+                  "icon": "icon-input",
+                  "options": {
+                    "width": "150px",
+                    "customClass": "cloud-form-input",
+                    "defaultValue": "",
+                    "required": false,
+                    "dataType": "string",
+                    "pattern": "",
+                    "placeholder": "",
+                    "disabled": false,
+                    "readonly": false,
+                    "isShowLabel": false,
+                    "showPassword": false,
+                    "labelWidth": 100,
+                    "isSupportLabelWidth": false,
+                    "remoteFunc": "func_1579262929263",
+                    "hidden": false,
+                    "dataBind": true,
+                    "remoteOption": "option_1579262929263",
+                    "tableColumn": true
+                  },
+                  "name": "销贷方名称",
+                  "novalid": {},
+                  "key": "1579262929263",
+                  "model": "input_1579262929263",
+                  "rules": [
+                    {
+                      "type": "string",
+                      "message": "销贷方名称格式不正确"
+                    }
+                  ]
+                },
+                {
+                  "type": "date",
+                  "icon": "icon-date",
+                  "options": {
+                    "defaultValue": "",
+                    "readonly": false,
+                    "disabled": false,
+                    "editable": true,
+                    "clearable": true,
+                    "placeholder": "",
+                    "startPlaceholder": "",
+                    "endPlaceholder": "",
+                    "type": "date",
+                    "format": "yyyy-MM-dd",
+                    "timestamp": false,
+                    "required": false,
+                    "width": "150px",
+                    "customClass": "form-date",
+                    "isShowLabel": false,
+                    "labelWidth": 100,
+                    "isSupportLabelWidth": false,
+                    "remoteFunc": "func_1579262964124",
+                    "hidden": false,
+                    "dataBind": true,
+                    "remoteOption": "option_1579262964124",
+                    "tableColumn": true
+                  },
+                  "name": "开票日期",
+                  "novalid": {},
+                  "key": "1579262964124",
+                  "model": "date_1579262964124",
+                  "rules": []
+                },
+                {
+                  "type": "input",
+                  "icon": "icon-input",
+                  "options": {
+                    "width": "100px",
+                    "customClass": "cloud-form-input",
+                    "defaultValue": "",
+                    "required": false,
+                    "dataType": "number",
+                    "pattern": "",
+                    "placeholder": "",
+                    "disabled": false,
+                    "readonly": false,
+                    "isShowLabel": false,
+                    "showPassword": false,
+                    "labelWidth": 100,
+                    "isSupportLabelWidth": false,
+                    "remoteFunc": "func_1579262988145",
+                    "hidden": false,
+                    "dataBind": true,
+                    "remoteOption": "option_1579262988145",
+                    "tableColumn": true
+                  },
+                  "name": "含税金额",
+                  "novalid": {},
+                  "key": "1579262988145",
+                  "model": "input_1579262988145",
+                  "rules": [
+                    {
+                      "type": "number",
+                      "message": "含税金额格式不正确"
+                    }
+                  ]
+                },
+                {
+                  "type": "select",
+                  "icon": "icon-select",
+                  "options": {
+                    "defaultValue": "",
+                    "multiple": false,
+                    "disabled": false,
+                    "clearable": false,
+                    "placeholder": "",
+                    "required": false,
+                    "showLabel": false,
+                    "width": "100px",
+                    "options": [
+                      {
+                        "value": "选项一"
+                      },
+                      {
+                        "value": "选项二"
+                      },
+                      {
+                        "value": "选项三"
+                      }
+                    ],
+                    "remote": false,
+                    "remoteType": "option",
+                    "filterable": false,
+                    "remoteOption": "option_1579263027545",
+                    "remoteOptions": [],
+                    "props": {
+                      "value": "value",
+                      "label": "label"
+                    },
+                    "customClass": "form-select",
+                    "isShowLabel": false,
+                    "labelWidth": 100,
+                    "isSupportLabelWidth": false,
+                    "remoteFunc": "func_1579263027545",
+                    "hidden": false,
+                    "dataBind": true,
+                    "tableColumn": true
+                  },
+                  "name": "税率",
+                  "novalid": {},
+                  "key": "1579263027545",
+                  "model": "select_1579263027545",
+                  "rules": []
+                },
+                {
+                  "type": "input",
+                  "icon": "icon-input",
+                  "options": {
+                    "width": "100px",
+                    "customClass": "cloud-form-input",
+                    "defaultValue": "",
+                    "required": false,
+                    "dataType": "string",
+                    "pattern": "",
+                    "placeholder": "",
+                    "disabled": false,
+                    "readonly": false,
+                    "isShowLabel": false,
+                    "showPassword": false,
+                    "labelWidth": 100,
+                    "isSupportLabelWidth": false,
+                    "remoteFunc": "func_1579263085548",
+                    "hidden": false,
+                    "dataBind": true,
+                    "remoteOption": "option_1579263085548",
+                    "tableColumn": true
+                  },
+                  "name": "金额（不含税）",
+                  "novalid": {},
+                  "key": "1579263085548",
+                  "model": "input_1579263085548",
+                  "rules": [
+                    {
+                      "type": "string",
+                      "message": "金额（不含税）格式不正确"
+                    }
+                  ]
+                }
+              ],
+              "name": "子表单",
+              "key": "1579262861803",
+              "model": "table_1579262861803",
+              "rules": []
+            }
+          ]
+        }
+      ],
+      "options": {
+        "type": "",
+        "tabPosition": "top",
+        "customClass": "form-tabs",
+        "tabEditable": false,
+        "tabLabel": "标签页",
+        "hidden": false,
+        "remoteFunc": "func_1579262747065",
+        "remoteOption": "option_1579262747065",
+        "isSupportLabelWidth": false,
+        "labelWidth": 100
+      },
+      "name": "标签页",
+      "key": "1579262747065",
+      "model": "tabs_1579262747065",
+      "rules": [],
+      "id": "b324a6ef"
     }
   ],
-  'config': {
-    'labelWidth': 100,
-    'labelPosition': 'right',
-    'size': 'small',
-    'customClass': 'form-',
-    'labelSuffix': '',
-    'requestConfig': {
-      'url': '',
-      'method': 'post',
-      'headers': {},
-      'queryParams': {},
-      'bodyParams': {}
+  "config": {
+    "labelWidth": 100,
+    "labelPosition": "right",
+    "size": "small",
+    "customClass": "form-",
+    "labelSuffix": "",
+    "requestConfig": {
+      "url": "",
+      "method": "post",
+      "headers": {},
+      "queryParams": {},
+      "bodyParams": {}
     },
-    'requestCurrentRoleConfig': {
-      'url': 'http://geekstorm.picp.vip/builder/open/role/current/',
-      'method': 'post'
+    "requestCurrentRoleConfig": {
+      "url": "http://geekstorm.picp.vip/builder/open/role/current/",
+      "method": "post"
     }
   }
 };
@@ -1507,3 +2344,4 @@ console.log(mergeComponentConfig(data.list));
 
 
 console.log(JSON.stringify(data, null, 2));
+console.log()
