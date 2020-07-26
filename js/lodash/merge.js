@@ -138,18 +138,29 @@ var targetJson = {
 
 
 var users = {
-  'data': [{'user': 'barney'}, {'age': '50'}]
+  'data': [{'user': 'barney'}]
 };
 var ages = {
-  'data': [{'age': '36'}, {'age': ''}]
+  'data': [{'age': '36'}]
 };
-console.log(_.merge(users, ages));
-console.log('ages', ages);
+// console.log(_.merge(users, ages));
+// con
+// sole.log('ages', ages);
+
+function customizer(objValue, srcValue) {
+  if (_.isArray(objValue)) {
+    return objValue.concat(srcValue);
+  }
+}
+
+console.log(_.mergeWith(users, ages,customizer ));
 
 
-var assignJson = _.assign({}, sourceJson, targetJson);
-var extendJson = _.extend({}, sourceJson, targetJson);
-var mergeJson = _.merge({}, sourceJson, targetJson);
+
+
+// var assignJson = _.assign({}, sourceJson, targetJson);
+// var extendJson = _.extend({}, sourceJson, targetJson);
+// var mergeJson = _.merge({}, sourceJson, targetJson);
 
 // console.log('assignJson', assignJson);
 // console.log('extendJson', extendJson);
