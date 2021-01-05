@@ -16,7 +16,7 @@
     "lint": "eslint --fix --ext .js,.vue src/modules"
   },
   "dependencies": {
-    "axios": "^0.17.1",
+    "axios": "^0.21.1",
     "cloud-utils": "latest",
     "lib-flexible": "^0.3.2",
     "magicless": "latest",
